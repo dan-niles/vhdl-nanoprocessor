@@ -72,9 +72,6 @@ UUT: PC PORT MAP(
         D <= "010";
         wait for 200ns;
         
-        --D <= "011";
-        --wait for 200ns;
-        
         Res <= '1';
         wait for 100ns;
         

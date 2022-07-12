@@ -40,6 +40,7 @@ entity FA is
 end FA;
 
 architecture Behavioral of FA is
+
 component HA
     PORT( 
         A, B : in STD_LOGIC;
@@ -64,7 +65,7 @@ HA_1 : HA
         C => HA1_C
      );    
      
-     C_out <= HA0_C OR HA1_C;
-     S <= HA1_S;
+C_out <= HA0_C OR HA1_C;
+S <= HA1_S;
 
 end Behavioral;

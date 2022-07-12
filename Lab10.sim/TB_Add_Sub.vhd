@@ -55,6 +55,7 @@ UUT: Add_Sub_Unit PORT MAP(
         S => S,        
         C_out => c_out
     );
+    
     process
     begin
     -- sel = 0 : Adder

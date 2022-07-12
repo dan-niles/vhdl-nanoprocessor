@@ -1,69 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1657567514">
-  <File Type="OPT-HWDEF" Name="Add_Sub_Unit.hwdef"/>
   <File Type="ROUTE-BUS-SKEW" Name="Add_Sub_Unit_bus_skew_routed.rpt"/>
   <File Type="PA-DCP" Name="Add_Sub_Unit.dcp"/>
-  <File Type="BITSTR-BMM" Name="Add_Sub_Unit_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="Add_Sub_Unit_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="Add_Sub_Unit_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="Add_Sub_Unit.hwdef"/>
   <File Type="ROUTE-PWR" Name="Add_Sub_Unit_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Add_Sub_Unit.tcl"/>
-  <File Type="OPT-TIMING" Name="Add_Sub_Unit_timing_summary_opted.rpt"/>
+  <File Type="BITSTR-BMM" Name="Add_Sub_Unit_bd.bmm"/>
   <File Type="OPT-DCP" Name="Add_Sub_Unit_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="Add_Sub_Unit_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="Add_Sub_Unit_reports.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="Add_Sub_Unit_power_summary_routed.pb"/>
   <File Type="OPT-DRC" Name="Add_Sub_Unit_drc_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="Add_Sub_Unit_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="Add_Sub_Unit_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="Add_Sub_Unit_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="Add_Sub_Unit_placed.dcp"/>
   <File Type="PLACE-IO" Name="Add_Sub_Unit_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="Add_Sub_Unit_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="Add_Sub_Unit_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="Add_Sub_Unit_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="Add_Sub_Unit_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="Add_Sub_Unit_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="Add_Sub_Unit_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="Add_Sub_Unit_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="Add_Sub_Unit_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="Add_Sub_Unit.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="Add_Sub_Unit_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="Add_Sub_Unit_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="Add_Sub_Unit_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="Add_Sub_Unit.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="Add_Sub_Unit_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="Add_Sub_Unit_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="Add_Sub_Unit_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="Add_Sub_Unit_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="Add_Sub_Unit_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Add_Sub_Unit_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="Add_Sub_Unit.ltx"/>
   <File Type="ROUTE-DRC-RPX" Name="Add_Sub_Unit_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="Add_Sub_Unit.mmi"/>
+  <File Type="BITSTR-LTX" Name="Add_Sub_Unit.ltx"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="Add_Sub_Unit_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="Add_Sub_Unit.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Add_Sub_Unit_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="Add_Sub_Unit.sysdef"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Add_Sub_Unit_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="Add_Sub_Unit.sysdef"/>
   <File Type="ROUTE-PWR-RPX" Name="Add_Sub_Unit_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="Add_Sub_Unit_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="Add_Sub_Unit_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="Add_Sub_Unit_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="Add_Sub_Unit_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="Add_Sub_Unit_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="Add_Sub_Unit_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="Add_Sub_Unit_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="Add_Sub_Unit_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="Add_Sub_Unit_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Add_Sub_Unit_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Add_Sub_Unit_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Add_Sub_Unit_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Add_Sub_Unit_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Add_Sub_Unit_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Add_Sub_Unit_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Add_Sub_Unit_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="Add_Sub_Unit.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Add_Sub_Unit_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="Add_Sub_Unit.rbt"/>
   <File Type="BITSTR-NKY" Name="Add_Sub_Unit.nky"/>
   <File Type="BG-BGN" Name="Add_Sub_Unit.bgn"/>

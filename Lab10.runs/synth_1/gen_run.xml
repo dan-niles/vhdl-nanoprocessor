@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1657567449">
   <File Type="PA-TCL" Name="Add_Sub_Unit.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Add_Sub_Unit_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Add_Sub_Unit_reports.tcl"/>
   <File Type="RDS-RDS" Name="Add_Sub_Unit.vds"/>
   <File Type="RDS-UTIL" Name="Add_Sub_Unit_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Add_Sub_Unit_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Add_Sub_Unit.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Add_Sub_Unit_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Add_Sub_Unit_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/new/FA.vhd">
