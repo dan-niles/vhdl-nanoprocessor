@@ -55,7 +55,7 @@ end component;
 
 signal I : STD_LOGIC_VECTOR (2 downto 0);
 signal Clk, Clr : STD_LOGIC := '0';
-signal D, R0, R1, R2, R3, R4, R5, R6, R7 : STD_LOGIC_VECTOR (3 downto 0);
+signal D, R0, R1, R2, R3, R4, R5, R6, R7 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
 
 begin
 UUT: Reg_Bank PORT MAP(
@@ -98,7 +98,25 @@ UUT: Reg_Bank PORT MAP(
         wait for 50ns;
         
         Clr <= '1';
-        wait;
+        wait for 50ns;
+        Clr <= '0';
+        
+        I <= "010"; -- Write to R2
+        D <= "0001";
+        wait for 50ns;
+        
+        I <= "011"; -- Write to R3
+        D <= "0111";
+        wait for 50ns;
+        
+        I <= "101"; -- Write to R5
+        D <= "1010";
+        wait for 50ns;
+        
+        Clr <= '1';
+        wait for 50ns;
+        Clr <= '0';
+        
     end process;
     
 
