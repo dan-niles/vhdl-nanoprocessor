@@ -40,6 +40,7 @@
   <File Type="ROUTE-TIMING-PB" Name="Add_Sub_Unit_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="Add_Sub_Unit_timing_summary_routed.rpx"/>
   <File Type="ROUTE-CLK" Name="Add_Sub_Unit_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="Add_Sub_Unit.vdi"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="Add_Sub_Unit_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="Add_Sub_Unit_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Add_Sub_Unit_postroute_physopt.dcp"/>
@@ -49,7 +50,6 @@
   <File Type="BITSTR-NKY" Name="Add_Sub_Unit.nky"/>
   <File Type="BG-BGN" Name="Add_Sub_Unit.bgn"/>
   <File Type="BG-DRC" Name="Add_Sub_Unit.drc"/>
-  <File Type="RDI-RDI" Name="Add_Sub_Unit.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
