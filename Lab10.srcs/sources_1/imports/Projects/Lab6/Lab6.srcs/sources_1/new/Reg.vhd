@@ -42,16 +42,15 @@ end Reg;
 architecture Behavioral of Reg is
 
 begin
-    process(Clk)
+    process(Clk,Clr)
     begin
-        if(rising_edge(Clk)) then
-            if(Clr = '1') then
-                Q <= "0000";
-            elsif(En = '1') then
+        if(Clr = '1') then
+            Q <= "0000";
+        elsif(rising_edge(Clk)) then
+            if(En = '1') then
                 Q <= D;
             end if;
         end if;
     end process;
-
 
 end Behavioral;

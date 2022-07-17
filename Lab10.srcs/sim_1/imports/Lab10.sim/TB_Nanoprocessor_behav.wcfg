@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1125377644fs"></ZoomEndTime>
+      <ZoomEndTime time="548034935fs"></ZoomEndTime>
       <Cursor1Time time="373112000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="162"></NameColumnWidth>
-      <ValueColumnWidth column_width="70"></ValueColumnWidth>
+      <ValueColumnWidth column_width="62"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="10" />
    <wvobject fp_name="/TB_Nanoprocessor/Clk" type="logic">
       <obj_property name="ElementShortName">Clk</obj_property>
       <obj_property name="ObjectShortName">Clk</obj_property>
@@ -30,10 +30,6 @@
    <wvobject fp_name="/TB_Nanoprocessor/Reset" type="logic">
       <obj_property name="ElementShortName">Reset</obj_property>
       <obj_property name="ObjectShortName">Reset</obj_property>
-   </wvobject>
-   <wvobject fp_name="/TB_Nanoprocessor/L" type="array">
-      <obj_property name="ElementShortName">L[3:0]</obj_property>
-      <obj_property name="ObjectShortName">L[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/TB_Nanoprocessor/UUT/I" type="array">
       <obj_property name="ElementShortName">I[0:11]</obj_property>
@@ -63,5 +59,14 @@
       <obj_property name="ObjectShortName">P_Flag</obj_property>
       <obj_property name="CustomSignalColor">#00FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Seg_7" type="array">
+      <obj_property name="ElementShortName">Seg_7[6:0]</obj_property>
+      <obj_property name="ObjectShortName">Seg_7[6:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/R" type="array">
+      <obj_property name="ElementShortName">R[0:7][3:0]</obj_property>
+      <obj_property name="ObjectShortName">R[0:7][3:0]</obj_property>
    </wvobject>
 </wave_config>

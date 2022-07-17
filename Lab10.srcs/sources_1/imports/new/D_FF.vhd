@@ -43,15 +43,13 @@ architecture Behavioral of D_FF is
 
 begin
 
-    process (Clk) begin        
-        if (rising_edge(Clk)) then
-            if Res = '1' then
-                Q <= '0';
-                Qbar <= '1';
-            else
-                Q <= D;
-                Qbar <= not D;
-            end if;
+    process (Clk, Res) begin   
+        if(Res = '1') then
+            Q <= '0';    
+            Qbar <= '1'; 
+        elsif(rising_edge(Clk)) then
+            Q <= D;
+            Qbar <= not D;
         end if;
     end process;
 

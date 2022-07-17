@@ -34,11 +34,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Nanoprocessor is
     Port ( Clk : in STD_LOGIC;
            Reset : in STD_LOGIC;
-           L : out STD_LOGIC_VECTOR (3 downto 0);
            C_Flag : out STD_LOGIC; -- Carry flag
            Z_Flag : out STD_LOGIC; -- Zero flag
            N_Flag : out STD_LOGIC; -- Negetive flag
-           P_Flag : out STD_LOGIC -- Parity flag (Odd parity detector)
+           P_Flag : out STD_LOGIC; -- Parity flag (Odd parity detector)
+           Seg_7 : out STD_LOGIC_VECTOR (6 downto 0);
+           Anode : out STD_LOGIC_VECTOR (3 downto 0)
          );
 end Nanoprocessor;
 
@@ -149,6 +150,11 @@ component Mux_8_4
            S : in STD_LOGIC_VECTOR (2 downto 0);
            Q : out STD_LOGIC_VECTOR (3 downto 0)
          );
+end component;
+
+component LUT_16_7
+    Port ( address : in STD_LOGIC_VECTOR (3 downto 0);
+           data : out STD_LOGIC_VECTOR (6 downto 0));
 end component;
 
 type DATA_BUS is array (0 to 7) of std_logic_vector(3 downto 0);
@@ -284,7 +290,14 @@ Mux_8_4_B : Mux_8_4
         S => Sel_B,
         Q => B
     );
+    
+-- 7-Segment Display
+Seg7_LUT : LUT_16_7
+    PORT MAP ( 
+        address => R(7),
+        data => Seg_7
+    );
 
-L <= R(7); -- Output to LEDs
+Anode <= "0001";
 
 end Behavioral;

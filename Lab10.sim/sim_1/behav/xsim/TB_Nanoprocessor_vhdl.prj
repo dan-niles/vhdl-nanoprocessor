@@ -9,6 +9,7 @@ vhdl xil_defaultlib  \
 "../../../../Lab10.srcs/sources_1/imports/new/HA.vhd" \
 "../../../../Lab10.srcs/sources_1/new/Inst_Decoder.vhd" \
 "../../../../Lab10.srcs/sources_1/new/Inst_Reg.vhd" \
+"../../../../Lab10.srcs/sources_1/imports/new/LUT_16_7.vhd" \
 "../../../../Lab10.srcs/sources_1/new/MUX_2_to_1.vhd" \
 "../../../../Lab10.srcs/sources_1/new/Mux_2_3.vhd" \
 "../../../../Lab10.srcs/sources_1/new/Mux_2_4.vhd" \

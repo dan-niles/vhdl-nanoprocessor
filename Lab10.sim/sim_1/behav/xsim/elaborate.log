@@ -31,6 +31,7 @@ Compiling architecture behavioral of entity xil_defaultlib.Mux_2_3 [mux_2_3_defa
 Compiling architecture behavioral of entity xil_defaultlib.Mux_2_4 [mux_2_4_default]
 Compiling architecture behavioral of entity xil_defaultlib.Mux_8_to_1 [mux_8_to_1_default]
 Compiling architecture behavioral of entity xil_defaultlib.Mux_8_4 [mux_8_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.LUT_16_7 [lut_16_7_default]
 Compiling architecture behavioral of entity xil_defaultlib.Nanoprocessor [nanoprocessor_default]
 Compiling architecture behavioral of entity xil_defaultlib.tb_nanoprocessor
 Built simulation snapshot TB_Nanoprocessor_behav
