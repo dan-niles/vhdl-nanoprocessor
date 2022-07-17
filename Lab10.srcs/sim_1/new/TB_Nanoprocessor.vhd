@@ -47,7 +47,7 @@ component Nanoprocessor
          );
 end component;
 
-signal Clk : STD_LOGIC := 0;
+signal Clk : STD_LOGIC := '0';
 signal Reset, C_Flag, Z_Flag , N_Flag, P_Flag : STD_LOGIC;
 signal L : STD_LOGIC_VECTOR (3 downto 0);
 
@@ -64,9 +64,17 @@ UUT: Nanoprocessor PORT MAP(
     
     process 
     begin
-        wait for 20ns;
+        wait for 5ns;
         Clk <= NOT(Clk);
     end process;
-
+    
+    process
+    begin
+        Reset <= '1';
+        wait for 80ns;
+        
+        Reset <= '0';
+        wait;
+    end process;
 
 end Behavioral;

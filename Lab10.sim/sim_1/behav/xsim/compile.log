@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Lab10/Lab10.srcs/sim_1/new/TB_Inst_Decoder.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity TB_Inst_Decoder
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Lab10/Lab10.srcs/sources_1/imports/new/D_FF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity D_FF

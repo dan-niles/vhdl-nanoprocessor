@@ -39,14 +39,14 @@ end Program_Rom;
 architecture Behavioral of Program_Rom is
 type rom_type is array (0 to 7) of std_logic_vector(0 to 11);
     signal PROGRAM_ROM : rom_type := (
-        "100100001111", -- 0
-        "110011000010", -- 1
-        "010011000100", -- 2
-        "000000001000", -- 3
-        "110000010000", -- 4
-        "100000101010", -- 5
-        "010001001000", -- 6
-        "000010101000"  -- 7
+        "101110000010", -- 0 -- MOV 2 to Reg 7
+        "101100000011", -- 1 -- MOV 3 to Reg 6
+        "001111100000", -- 2 -- ADD Reg 7 and Reg 6 (2+3) = 5
+        "011110000000", -- 3 -- NEG Reg 7 = (-5)
+        "001111100000", -- 4 -- ADD Reg 7 and Reg 6 (-5+3) = -2
+        "011110000000", -- 5 -- NEG Reg 7 = (2)
+        "000000000000", -- 6 
+        "110000000110"  -- 7 -- Jump to instruction 6 if Reg_0 = 000
     );
 
 begin

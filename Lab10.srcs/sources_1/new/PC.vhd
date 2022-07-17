@@ -48,9 +48,6 @@ Port ( D : in STD_LOGIC;
        Qbar : out STD_LOGIC);  
 end component;
 
-signal D0, D1, D2 : STD_LOGIC; -- Internal signals
-signal Q_0, Q_1, Q_2 : STD_LOGIC; -- Internal signals  
-
 begin
  D_FF0 : D_FF
     PORT MAP (
