@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 07/14/2022 06:15:16 PM
+-- Create Date: 07/17/2022 09:22:43 AM
 -- Design Name: 
--- Module Name: Inst_Decoder - Behavioral
+-- Module Name: TB_Inst_Decoder - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,7 +31,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Inst_Decoder is
+entity TB_Inst_Decoder is
+--  Port ( );
+end TB_Inst_Decoder;
+
+architecture Behavioral of TB_Inst_Decoder is
+component Inst_Decoder
     Port ( Inst : in STD_LOGIC_VECTOR (0 to 11); -- Instruction
            Clk : in STD_LOGIC;
            Reg_Chk : in STD_LOGIC_VECTOR (3 downto 0); -- Check register value for JZR
@@ -43,42 +48,49 @@ entity Inst_Decoder is
            Add_Sub_Sel : out STD_LOGIC; -- Add Sub selector
            Jmp : out STD_LOGIC; -- Jump flag
            Jmp_Address : out STD_LOGIC_VECTOR (2 downto 0)); -- Address to jump
-end Inst_Decoder;
-
-architecture Behavioral of Inst_Decoder is
-component Inst_Reg
-    Port ( D : in STD_LOGIC_VECTOR (0 to 11);
-           En : in STD_LOGIC;
-           Clk : in STD_LOGIC;
-           Q : out STD_LOGIC_VECTOR (0 to 11));
 end component;
 
-signal I : STD_LOGIC_VECTOR (0 to 11);
+signal Inst : STD_LOGIC_VECTOR (0 to 11);
+signal Reg_Chk, Imd_Val : STD_LOGIC_VECTOR (3 downto 0);
+signal Reg_Sel_A, Reg_Sel_B, Reg_En, Jmp_Address : STD_LOGIC_VECTOR (2 downto 0);
+signal Clk, Load_Sel, Add_Sub_Sel, Jmp : STD_LOGIC := '0';
 
 begin
-Inst_Reg_12 : Inst_Reg -- 12 bit instruction register
-    port map (
-        D => Inst,
-        En => '1',
-        Clk => Clk,
-        Q => I
+UUT: Inst_Decoder PORT MAP(
+           Inst => Inst,
+           Clk => Clk,
+           Reg_Chk => Reg_Chk,
+           Reg_Sel_A => Reg_Sel_A,
+           Reg_Sel_B => Reg_Sel_B,
+           Imd_Val => Imd_Val,
+           Reg_En => Reg_En,
+           Load_Sel => Load_Sel,
+           Add_Sub_Sel => Add_Sub_Sel,
+           Jmp => Jmp,
+           Jmp_Address => Jmp_Address
     );
-
--- Mapping 1st two bits of instruction
--- 10 - MOV, 00 - ADD, 01 - NEG, 11 - JZR
-Add_Sub_Sel <= NOT(I(0)) AND I(1);
-Load_Sel <= I(0) AND NOT(I(1));
-Jmp <= (I(0) AND I(1)) AND NOT(Reg_Chk(0) OR Reg_Chk(1) OR Reg_Chk(2) OR Reg_Chk(3));
-
--- Mapping bits 3-5 for register A
-Reg_Sel_A <= I(2) & I(3) & I(4);
-Reg_En <= I(2) & I(3) & I(4);
-
--- Mapping bits 6-8 for register B
-Reg_Sel_B <= I(5) & I(6) & I(7);
-
--- Mapping last 4 bits
-Imd_Val <= I(8) & I(9) & I(10) & I(11);
-Jmp_Address <= I(9) & I(10) & I(11);
+    
+    process 
+    begin
+        wait for 20ns;
+        Clk <= NOT(Clk);
+    end process;
+    
+    process
+    begin
+        Inst <= "101010001101"; -- MOV
+        wait for 100ns;
+        
+        Inst <= "000110010000"; -- ADD
+        wait for 100ns;
+        
+        Inst <= "010100000000"; -- NEG
+        wait for 100ns;
+        
+        Inst <= "111110000011"; -- JZR
+        Reg_Chk <= "0000";
+        wait for 100ns;
+    
+    end process;
 
 end Behavioral;
