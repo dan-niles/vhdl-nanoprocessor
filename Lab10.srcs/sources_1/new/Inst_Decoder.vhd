@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Inst_Decoder is
-    Port ( Inst : in STD_LOGIC_VECTOR (11 downto 0); -- Instruction
+    Port ( Inst : in STD_LOGIC_VECTOR (0 to 11); -- Instruction
            Clk : in STD_LOGIC;
            Reg_Chk : in STD_LOGIC_VECTOR (3 downto 0); -- Check register value for JZR
            Reg_Sel_A : out STD_LOGIC_VECTOR (2 downto 0);
@@ -46,8 +46,26 @@ entity Inst_Decoder is
 end Inst_Decoder;
 
 architecture Behavioral of Inst_Decoder is
+component Inst_Reg
+    Port ( D : in STD_LOGIC_VECTOR (0 to 11);
+           En : in STD_LOGIC;
+           Clk : in STD_LOGIC;
+           Q : out STD_LOGIC_VECTOR (0 to 11));
+end component;
+
+signal I : STD_LOGIC_VECTOR (0 to 11);
 
 begin
+Inst_Reg_12 : Inst_Reg -- 12 bit instruction register
+    port map (
+        D => Inst,
+        En => '1',
+        Clk => Clk,
+        Q => I
+    );
+    
+Add_Sub_Sel <= NOT(I(0)) AND I(1);
+Load_Sel <= I(0) AND NOT(I(1));
 
 
 end Behavioral;

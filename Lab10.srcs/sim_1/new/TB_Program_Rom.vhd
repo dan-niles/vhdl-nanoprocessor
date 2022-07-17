@@ -38,12 +38,12 @@ end TB_Program_Rom;
 architecture Behavioral of TB_Program_Rom is
 component Program_Rom
     Port ( S : in STD_LOGIC_VECTOR (2 downto 0);
-           Q : out STD_LOGIC_VECTOR (11 downto 0));
+           Q : out STD_LOGIC_VECTOR (0 to 11));
            
 end component;
 
 signal S : STD_LOGIC_VECTOR (2 downto 0);
-signal Q : STD_LOGIC_VECTOR (11 downto 0);
+signal Q : STD_LOGIC_VECTOR (0 to 11);
 
 begin
 UUT: Program_Rom PORT MAP(

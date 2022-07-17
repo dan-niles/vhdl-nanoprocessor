@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 07/14/2022 05:26:35 PM
+-- Create Date: 07/17/2022 08:42:01 AM
 -- Design Name: 
--- Module Name: Program_Rom - Behavioral
+-- Module Name: Inst_Reg - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -24,33 +24,31 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
-use IEEE.NUMERIC_STD.ALL;
+--use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Program_Rom is
-    Port ( S : in STD_LOGIC_VECTOR (2 downto 0);
+entity Inst_Reg is
+    Port ( D : in STD_LOGIC_VECTOR (0 to 11);
+           En : in STD_LOGIC;
+           Clk : in STD_LOGIC;
            Q : out STD_LOGIC_VECTOR (0 to 11));
-end Program_Rom;
+end Inst_Reg;
 
-architecture Behavioral of Program_Rom is
-type rom_type is array (0 to 7) of std_logic_vector(0 to 11);
-    signal PROGRAM_ROM : rom_type := (
-        "100100001111", -- 0
-        "110011000010", -- 1
-        "010011000100", -- 2
-        "000000001000", -- 3
-        "110000010000", -- 4
-        "100000101010", -- 5
-        "010001001000", -- 6
-        "000010101000"  -- 7
-    );
+architecture Behavioral of Inst_Reg is
 
 begin
+    process(Clk)
+    begin
+        if(rising_edge(Clk)) then
+            if(En = '1') then
+                Q <= D;
+            end if;
+        end if;
+    end process;
 
-Q <= PROGRAM_ROM(to_integer(unsigned(S)));
 
 end Behavioral;
