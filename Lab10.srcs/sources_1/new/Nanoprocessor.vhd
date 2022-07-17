@@ -34,7 +34,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Nanoprocessor is
     Port ( Clk : in STD_LOGIC;
            Reset : in STD_LOGIC;
-           L : out STD_LOGIC_VECTOR (3 downto 0));
+           L : out STD_LOGIC_VECTOR (3 downto 0);
+           C_Flag : out STD_LOGIC; -- Carry flag
+           Z_Flag : out STD_LOGIC; -- Zero flag
+           N_Flag : out STD_LOGIC; -- Negetive flag
+           P_Flag : out STD_LOGIC -- Parity flag (Odd parity detector)
+         );
 end Nanoprocessor;
 
 architecture Behavioral of Nanoprocessor is
@@ -146,11 +151,14 @@ component Mux_8_4
          );
 end component;
 
+type DATA_BUS is array (0 to 7) of std_logic_vector(3 downto 0);
+
 signal Clk_slow : STD_LOGIC; -- Internal clock
 signal LD, Sub, Jmp : STD_LOGIC;
-signal Sel_A, Sel_B, Reg_En, Address, Jmp_Address, Mem_Sel : STD_LOGIC_VECTOR (2 downto 0);
-signal A, B, D, M, R : STD_LOGIC_VECTOR (3 downto 0);
+signal Sel_A, Sel_B, Reg_En, Address, Jmp_Address, Prg_Address, Mem_Sel : STD_LOGIC_VECTOR (2 downto 0);
+signal A, B, S, D, M : STD_LOGIC_VECTOR (3 downto 0);
 signal I : STD_LOGIC_VECTOR (0 to 11);
+signal R : DATA_BUS;
 begin
 
 -- Slow Clock
@@ -161,7 +169,7 @@ Slow_Clock : Slow_Clk
     );
 
 -- Instruction Decoder
-I_Decoder: Inst_Decoder
+I_Decoder : Inst_Decoder
     PORT MAP (
         Inst => I, 
         Clk => Clk_slow, 
@@ -177,19 +185,106 @@ I_Decoder: Inst_Decoder
     );
 
 -- Program Rom
-Pro_Rom: Program_Rom
+Pro_Rom : Program_Rom
     PORT MAP (
         S => Mem_Sel,
         Q => I
     );
 
 -- Program Counter
-Pro_Counter: PC
+Pro_Counter : PC
     PORT MAP ( 
         D => Address,
         Clk => Clk_slow,
         Res => Reset,
-        Q => Mem_Sel,
+        Q => Mem_Sel
     );
+
+-- Register Bank
+Register_Bank : Reg_Bank
+    PORT MAP ( 
+        D => D,
+        I => Reg_En,
+        Clk => Clk_slow,
+        Clr => Reset,
+        R0 => R(0),
+        R1 => R(1),
+        R2 => R(2),
+        R3 => R(3),
+        R4 => R(4),
+        R5 => R(5),
+        R6 => R(6),
+        R7 => R(7)
+    );
+
+-- 4 bit Add/Sub Unit
+AS_Unit : Add_Sub_Unit
+    PORT MAP ( 
+        A => A,
+        B => B,
+        Sel => Sub,
+        S => S,
+        C_Out => C_Flag,
+        Z_Out => Z_Flag,
+        N_Out => N_Flag,
+        P_Out => P_Flag
+    );
+
+-- 3 bit Adder
+Adder_3_bit : Add_3
+    PORT MAP ( 
+        A => Mem_Sel,
+        S => Prg_Address
+    );
+
+-- 2-way 3-bit Mux
+Mux_2_way_3_bit : Mux_2_3
+    PORT MAP ( 
+        I0 => Prg_Address,
+        I1 => Jmp_Address,
+        S => Jmp,
+        Q => Address
+    );
+
+-- 2-way 4-bit Mux
+Mux_2_way_4_bit : Mux_2_4
+    PORT MAP ( 
+        I0 => S,
+        I1 => M,
+        S => LD,
+        Q => D
+    );
+
+-- 8-way 4-bit Mux
+Mux_8_4_A : Mux_8_4
+    PORT MAP ( 
+        R0 => R(0),
+        R1 => R(1),
+        R2 => R(2),
+        R3 => R(3),
+        R4 => R(4),
+        R5 => R(5),
+        R6 => R(6),
+        R7 => R(7),
+        S => Sel_A,
+        Q => A
+    );
+
+-- 8-way 4-bit Mux
+Mux_8_4_B : Mux_8_4
+    PORT MAP ( 
+        R0 => R(0),
+        R1 => R(1),
+        R2 => R(2),
+        R3 => R(3),
+        R4 => R(4),
+        R5 => R(5),
+        R6 => R(6),
+        R7 => R(7),
+        S => Sel_B,
+        Q => B
+    );
+
+L <= R(7); -- Output to LEDs
 
 end Behavioral;
