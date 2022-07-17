@@ -46,7 +46,7 @@ begin
         if (rising_edge(Clk_in)) then
             count <= count + 1;           
             --if(count  = 50000000) then  -- For Basys3 board
-              if(count  = 4) then         -- For simulation in vivado
+            if(count  = 4) then         -- For simulation in vivado
                 clk_status <= not clk_status;
                 Clk_out <= clk_status;
                 count <= 1;

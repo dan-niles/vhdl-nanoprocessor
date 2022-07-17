@@ -222,6 +222,14 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
+      <File Path="$PSRCDIR/constrs_1/imports/Downloads/Basys3Labs.xdc">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="C:/Users/Dan/Downloads/Basys3Labs.xdc"/>
+          <Attr Name="ImportTime" Val="1658036135"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
