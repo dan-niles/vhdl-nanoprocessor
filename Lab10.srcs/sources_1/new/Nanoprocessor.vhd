@@ -45,6 +45,22 @@ component Slow_Clk
          );
 end component;
 
+-- Instruction Decoder
+component Inst_Decoder
+    Port ( Inst : in STD_LOGIC_VECTOR (0 to 11); -- Instruction
+           Clk : in STD_LOGIC;
+           Reg_Chk : in STD_LOGIC_VECTOR (3 downto 0); -- Check register value for JZR
+           Reg_Sel_A : out STD_LOGIC_VECTOR (2 downto 0);
+           Reg_Sel_B : out STD_LOGIC_VECTOR (2 downto 0);
+           Imd_Val : out STD_LOGIC_VECTOR (3 downto 0); -- Immediate value
+           Reg_En : out STD_LOGIC_VECTOR (2 downto 0); -- Enable register for write
+           Load_Sel : out STD_LOGIC; -- Choose between Imd value or Add/Sub Unit result
+           Add_Sub_Sel : out STD_LOGIC; -- Add Sub selector
+           Jmp : out STD_LOGIC; -- Jump flag
+           Jmp_Address : out STD_LOGIC_VECTOR (2 downto 0) -- Address to jump
+         );
+end component;
+
 -- Program Rom
 component Program_Rom
     Port ( S : in STD_LOGIC_VECTOR (2 downto 0);
@@ -131,13 +147,49 @@ component Mux_8_4
 end component;
 
 signal Clk_slow : STD_LOGIC; -- Internal clock
+signal LD, Sub, Jmp : STD_LOGIC;
+signal Sel_A, Sel_B, Reg_En, Address, Jmp_Address, Mem_Sel : STD_LOGIC_VECTOR (2 downto 0);
+signal A, B, D, M, R : STD_LOGIC_VECTOR (3 downto 0);
+signal I : STD_LOGIC_VECTOR (0 to 11);
 begin
 
-Slow_Clk_0 : Slow_Clk
+-- Slow Clock
+Slow_Clock : Slow_Clk
     PORT MAP (
         Clk_in => Clk,
         Clk_out => Clk_slow
     );
 
+-- Instruction Decoder
+I_Decoder: Inst_Decoder
+    PORT MAP (
+        Inst => I, 
+        Clk => Clk_slow, 
+        Reg_Chk => A,
+        Reg_Sel_A => Sel_A, 
+        Reg_Sel_B => Sel_B, 
+        Imd_Val => M, 
+        Reg_En => Reg_En, 
+        Load_Sel => LD, 
+        Add_Sub_Sel => Sub, 
+        Jmp => Jmp, 
+        Jmp_Address => Jmp_Address
+    );
+
+-- Program Rom
+Pro_Rom: Program_Rom
+    PORT MAP (
+        S => Mem_Sel,
+        Q => I
+    );
+
+-- Program Counter
+Pro_Counter: PC
+    PORT MAP ( 
+        D => Address,
+        Clk => Clk_slow,
+        Res => Reset,
+        Q => Mem_Sel,
+    );
 
 end Behavioral;
