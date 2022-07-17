@@ -48,28 +48,15 @@ Port ( D : in STD_LOGIC;
        Qbar : out STD_LOGIC);  
 end component;
 
-component Slow_Clk
-Port ( Clk_in : in STD_LOGIC;
-       Clk_out : out STD_LOGIC);
-end component;
-
 signal D0, D1, D2 : STD_LOGIC; -- Internal signals
 signal Q_0, Q_1, Q_2 : STD_LOGIC; -- Internal signals  
-signal Clk_slow : STD_LOGIC; -- Internal clock
 
 begin
-
-Slow_Clk0 : Slow_Clk
-    PORT MAP (
-        Clk_in => Clk,
-        Clk_out => Clk_slow
-    );
-
  D_FF0 : D_FF
     PORT MAP (
         D => D(0),
         Res => Res,
-        Clk => Clk_slow,
+        Clk => Clk,
         Q => Q(0)
     );
     
@@ -77,7 +64,7 @@ Slow_Clk0 : Slow_Clk
     PORT MAP (
         D => D(1),
         Res => Res,
-        Clk => Clk_slow,
+        Clk => Clk,
         Q => Q(1)
     );
     
@@ -85,7 +72,7 @@ Slow_Clk0 : Slow_Clk
     PORT MAP (
         D => D(2),
         Res => Res,
-        Clk => Clk_slow,
+        Clk => Clk,
         Q => Q(2)
     );
 
