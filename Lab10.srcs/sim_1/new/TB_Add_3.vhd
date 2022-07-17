@@ -38,7 +38,7 @@ end TB_Add_3;
 architecture Behavioral of TB_Add_3 is
 component Add_3
     Port ( A : in STD_LOGIC_VECTOR (2 downto 0);
-       S : out STD_LOGIC_VECTOR (2 downto 0));
+           S : out STD_LOGIC_VECTOR (2 downto 0));
 end component;
 
 signal a, s : STD_LOGIC_VECTOR (2 downto 0) := "000";
