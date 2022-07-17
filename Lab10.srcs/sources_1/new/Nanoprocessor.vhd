@@ -34,6 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Nanoprocessor is
     Port ( Clk : in STD_LOGIC;
            Reset : in STD_LOGIC;
+           L : out STD_LOGIC_VECTOR (3 downto 0); 
            C_Flag : out STD_LOGIC; -- Carry flag
            Z_Flag : out STD_LOGIC; -- Zero flag
            N_Flag : out STD_LOGIC; -- Negetive flag
@@ -298,6 +299,7 @@ Seg7_LUT : LUT_16_7
         data => Seg_7
     );
 
-Anode <= "0001";
+L <= R(7);
+Anode <= "1110";
 
 end Behavioral;
