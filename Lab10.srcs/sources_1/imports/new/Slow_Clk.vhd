@@ -33,6 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Slow_Clk is
     Port ( Clk_in : in STD_LOGIC;
+            Reset : in STD_LOGIC;
            Clk_out : out STD_LOGIC);
 end Slow_Clk;
 
@@ -43,11 +44,14 @@ signal clk_status : STD_LOGIC := '0';
 
 begin
 
-process (Clk_in) begin
-    if (rising_edge(Clk_in)) then
+process (Clk_in,Reset) begin
+    if (Reset = '1') then
+        clk_status <= '0';
+        Clk_out <= clk_status;
+    elsif (rising_edge(Clk_in)) then
         count <= count + 1;           
-        --if(count  = 50000000) then  -- For Basys3 board
-        if(count  = 4) then         -- For simulation in vivado
+        if(count  = 50000000) then  -- For Basys3 board
+--        if(count = 4) then         -- For simulation in vivado
             clk_status <= not clk_status;
             Clk_out <= clk_status;
             count <= 1;

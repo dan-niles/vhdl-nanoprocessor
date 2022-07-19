@@ -48,6 +48,7 @@ architecture Behavioral of Nanoprocessor is
 -- Slow Clock
 component Slow_Clk
     Port ( Clk_in : in STD_LOGIC;
+           Reset : in STD_LOGIC;
            Clk_out : out STD_LOGIC
          );
 end component;
@@ -172,6 +173,7 @@ begin
 Slow_Clock : Slow_Clk
     PORT MAP (
         Clk_in => Clk,
+        Reset => Reset,
         Clk_out => Clk_slow
     );
 

@@ -41,12 +41,9 @@ end Inst_Reg;
 architecture Behavioral of Inst_Reg is
 
 begin
-    process(Clk)
-    begin
-        if(rising_edge(Clk)) then
-            if(En = '1') then
-                Q <= D;
-            end if;
+    process(Clk) begin
+        if(falling_edge(Clk)) then
+            Q <= D;
         end if;
     end process;
 

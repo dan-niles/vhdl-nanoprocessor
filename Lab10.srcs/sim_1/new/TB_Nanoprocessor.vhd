@@ -74,8 +74,9 @@ UUT: Nanoprocessor PORT MAP(
     
     process
     begin
+        wait for 150ns;
         Reset <= '1';
-        wait for 80ns;
+        wait for 5ns;
         
         Reset <= '0';
         wait;

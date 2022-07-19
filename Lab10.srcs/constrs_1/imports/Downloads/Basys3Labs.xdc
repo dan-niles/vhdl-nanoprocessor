@@ -69,13 +69,13 @@ set_property PACKAGE_PIN V19 [get_ports {L[3]}]
 #set_property PACKAGE_PIN U3 [get_ports {led[11]}]
 	#set_property IOSTANDARD LVCMOS33 [get_ports {led[11]}]
 set_property PACKAGE_PIN P3 [get_ports {P_Flag}]
-	set_property IOSTANDARD LVCMOS33 [get_ports {P_Flag}] # Parity Flag
+	set_property IOSTANDARD LVCMOS33 [get_ports {P_Flag}]
 set_property PACKAGE_PIN N3 [get_ports {N_Flag}] 
-	set_property IOSTANDARD LVCMOS33 [get_ports {N_Flag}] # Negetive Flag
+	set_property IOSTANDARD LVCMOS33 [get_ports {N_Flag}]
 set_property PACKAGE_PIN P1 [get_ports {Z_Flag}]
-	set_property IOSTANDARD LVCMOS33 [get_ports {Z_Flag}] # Zero Flag
+	set_property IOSTANDARD LVCMOS33 [get_ports {Z_Flag}]
 set_property PACKAGE_PIN L1 [get_ports {C_Flag}]
-	set_property IOSTANDARD LVCMOS33 [get_ports {C_Flag}] # Carry Flag
+	set_property IOSTANDARD LVCMOS33 [get_ports {C_Flag}]
 
 
 ##7 segment display
