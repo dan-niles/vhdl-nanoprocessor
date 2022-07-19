@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1658082277">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1658261295">
   <File Type="PA-TCL" Name="Nanoprocessor.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Nanoprocessor_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Nanoprocessor_reports.tcl"/>
   <File Type="RDS-RDS" Name="Nanoprocessor.vds"/>
   <File Type="RDS-UTIL" Name="Nanoprocessor_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Nanoprocessor_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Nanoprocessor.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Nanoprocessor_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Nanoprocessor_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/Add_3.vhd">
@@ -180,7 +183,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
