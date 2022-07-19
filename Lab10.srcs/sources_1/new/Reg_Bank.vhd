@@ -32,10 +32,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Reg_Bank is
-    Port ( D : in STD_LOGIC_VECTOR (3 downto 0);
-           I : in STD_LOGIC_VECTOR (2 downto 0);
+    Port ( D : in STD_LOGIC_VECTOR (3 downto 0); -- Value to be written
+           I : in STD_LOGIC_VECTOR (2 downto 0); -- Register address select
            Clk : in STD_LOGIC;
-           Clr : in STD_LOGIC;
+           Clr : in STD_LOGIC; -- Reset all registers to 0000 
            R0 : out STD_LOGIC_VECTOR (3 downto 0);
            R1 : out STD_LOGIC_VECTOR (3 downto 0);
            R2 : out STD_LOGIC_VECTOR (3 downto 0);

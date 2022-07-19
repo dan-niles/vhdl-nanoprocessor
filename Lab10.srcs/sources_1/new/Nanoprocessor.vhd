@@ -33,14 +33,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Nanoprocessor is
     Port ( Clk : in STD_LOGIC;
-           Reset : in STD_LOGIC;
-           L : out STD_LOGIC_VECTOR (3 downto 0); 
+           Reset : in STD_LOGIC; -- Resets clock, program counter and register bank
+           L : out STD_LOGIC_VECTOR (3 downto 0); -- LED output of register 7
            C_Flag : out STD_LOGIC; -- Carry flag
            Z_Flag : out STD_LOGIC; -- Zero flag
            N_Flag : out STD_LOGIC; -- Negetive flag
            P_Flag : out STD_LOGIC; -- Parity flag (Odd parity detector)
-           Seg_7 : out STD_LOGIC_VECTOR (6 downto 0);
-           Anode : out STD_LOGIC_VECTOR (3 downto 0)
+           Seg_7 : out STD_LOGIC_VECTOR (6 downto 0); -- 7 Segment output of register 7
+           Anode : out STD_LOGIC_VECTOR (3 downto 0) -- Anode for 7 segment display
          );
 end Nanoprocessor;
 
@@ -58,15 +58,14 @@ component Inst_Decoder
     Port ( Inst : in STD_LOGIC_VECTOR (0 to 11); -- Instruction
            Clk : in STD_LOGIC;
            Reg_Chk : in STD_LOGIC_VECTOR (3 downto 0); -- Check register value for JZR
-           Reg_Sel_A : out STD_LOGIC_VECTOR (2 downto 0);
-           Reg_Sel_B : out STD_LOGIC_VECTOR (2 downto 0);
+           Reg_Sel_A : out STD_LOGIC_VECTOR (2 downto 0); -- To select register to load into MUX A
+           Reg_Sel_B : out STD_LOGIC_VECTOR (2 downto 0); -- To select register to load into MUX B
            Imd_Val : out STD_LOGIC_VECTOR (3 downto 0); -- Immediate value
            Reg_En : out STD_LOGIC_VECTOR (2 downto 0); -- Enable register for write
            Load_Sel : out STD_LOGIC; -- Choose between Imd value or Add/Sub Unit result
            Add_Sub_Sel : out STD_LOGIC; -- Add Sub selector
            Jmp : out STD_LOGIC; -- Jump flag
-           Jmp_Address : out STD_LOGIC_VECTOR (2 downto 0) -- Address to jump
-         );
+           Jmp_Address : out STD_LOGIC_VECTOR (2 downto 0)); -- Address to jump
 end component;
 
 -- Program Rom
@@ -301,7 +300,7 @@ Seg7_LUT : LUT_16_7
         data => Seg_7
     );
 
-L <= R(7);
-Anode <= "1110";
+L <= R(7); -- Map value in register 7 to LEDs
+Anode <= "1110"; -- Enable only first display in 7 segement display 
 
 end Behavioral;
