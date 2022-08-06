@@ -15,7 +15,6 @@ Compiling architecture behavioral of entity xil_defaultlib.Slow_Clk [slow_clk_de
 Compiling architecture behavioral of entity xil_defaultlib.Inst_Reg [inst_reg_default]
 Compiling architecture behavioral of entity xil_defaultlib.Inst_Decoder [inst_decoder_default]
 Compiling architecture behavioral of entity xil_defaultlib.Program_Rom [program_rom_default]
-Compiling architecture behavioral of entity xil_defaultlib.D_FF [d_ff_default]
 Compiling architecture behavioral of entity xil_defaultlib.PC [pc_default]
 Compiling architecture behavioral of entity xil_defaultlib.Decoder_2_to_4 [decoder_2_to_4_default]
 Compiling architecture behavioral of entity xil_defaultlib.Decoder_3_to_8 [decoder_3_to_8_default]

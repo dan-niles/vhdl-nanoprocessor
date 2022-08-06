@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_8_4.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity Mux_8_4
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Reg_Bank

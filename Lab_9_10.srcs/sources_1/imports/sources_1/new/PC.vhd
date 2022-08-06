@@ -32,44 +32,20 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity PC is
-    Port ( PC_in : in STD_LOGIC_VECTOR (2 downto 0);
+    Port ( PC_in : in STD_LOGIC_VECTOR (2 downto 0) := "000";
            Clk : in STD_LOGIC;
            Res : in STD_LOGIC;
-           PC_out : out STD_LOGIC_VECTOR (2 downto 0));
+           PC_out : out STD_LOGIC_VECTOR (2 downto 0) := "000");
 end PC;
 
 architecture Behavioral of PC is
 
-component D_FF
-Port ( D : in STD_LOGIC;
-       Res : in STD_LOGIC;
-       Clk : in STD_LOGIC;
-       Q : out STD_LOGIC);  
-end component;
-
 begin
- D_FF0 : D_FF
-    PORT MAP (
-        D => PC_in(0),
-        Res => Res,
-        Clk => Clk,
-        Q => PC_out(0)
-    );
-    
- D_FF1 : D_FF
-    PORT MAP (
-        D => PC_in(1),
-        Res => Res,
-        Clk => Clk,
-        Q => PC_out(1)
-    );
-    
- D_FF2 : D_FF
-    PORT MAP (
-        D => PC_in(2),
-        Res => Res,
-        Clk => Clk,
-        Q => PC_out(2)
-    );
-
+    process (Clk, Res) begin   
+        if(Res = '1') then
+            PC_out <= "000";
+        elsif(rising_edge(Clk)) then
+            PC_out <= PC_in;
+        end if;
+    end process;
 end Behavioral;
