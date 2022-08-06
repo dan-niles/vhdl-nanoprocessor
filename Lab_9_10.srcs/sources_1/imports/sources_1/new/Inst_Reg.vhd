@@ -30,11 +30,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- any Xilinx leaf cells in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
---  := "100010000011"
+
 entity Inst_Reg is
-    Port ( D : in STD_LOGIC_VECTOR (0 to 11);
+    Port ( D : in STD_LOGIC_VECTOR (0 to 12);
            Clk : in STD_LOGIC;
-           Q : out STD_LOGIC_VECTOR (0 to 11):= "100010000011");
+           Q : out STD_LOGIC_VECTOR (0 to 12):= "0100010000011");
 end Inst_Reg;
 
 

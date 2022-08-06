@@ -37,7 +37,7 @@ end TB_Inst_Decoder;
 
 architecture Behavioral of TB_Inst_Decoder is
 component Inst_Decoder
-    Port ( Inst : in STD_LOGIC_VECTOR (0 to 11); -- Instruction
+    Port ( Inst : in STD_LOGIC_VECTOR (0 to 12); -- Instruction
            Clk : in STD_LOGIC;
            Reg_Chk : in STD_LOGIC_VECTOR (3 downto 0); -- Check register value for JZR
            Reg_Sel_A : out STD_LOGIC_VECTOR (2 downto 0);
@@ -50,7 +50,7 @@ component Inst_Decoder
            Jmp_Address : out STD_LOGIC_VECTOR (2 downto 0)); -- Address to jump
 end component;
 
-signal Inst : STD_LOGIC_VECTOR (0 to 11);
+signal Inst : STD_LOGIC_VECTOR (0 to 12);
 signal Reg_Chk, Imd_Val : STD_LOGIC_VECTOR (3 downto 0);
 signal Reg_Sel_A, Reg_Sel_B, Reg_En, Jmp_Address : STD_LOGIC_VECTOR (2 downto 0);
 signal Clk, Load_Sel, Add_Sub_Sel, Jmp : STD_LOGIC := '0';
@@ -81,19 +81,19 @@ UUT: Inst_Decoder PORT MAP(
     
         -- Index number : 200421U = 11 0000 1110 1110 0101
     
-        Inst <= "100010000101"; -- MOV 5 to Reg 1
+        Inst <= "0100010000101"; -- MOV 5 to Reg 1
         wait for 100ns;
         
-        Inst <= "100100001110"; -- MOV -2 to Reg 2
+        Inst <= "0100100001110"; -- MOV -2 to Reg 2
         wait for 100ns;
         
-        Inst <= "000100010000"; -- ADD Reg 2 and Reg 1
+        Inst <= "0000100010000"; -- ADD Reg 2 and Reg 1
         wait for 100ns;
         
-        Inst <= "010010000000"; -- NEG Reg 1
+        Inst <= "0010010000000"; -- NEG Reg 1
         wait for 100ns;
         
-        Inst <= "111110000011"; -- JZR to Inst 3 if Reg 7 is zero
+        Inst <= "0111110000011"; -- JZR to Inst 3 if Reg 7 is zero
         Reg_Chk <= "0000";
         wait for 100ns;
     

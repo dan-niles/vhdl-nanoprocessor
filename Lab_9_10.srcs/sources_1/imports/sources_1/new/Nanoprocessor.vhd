@@ -56,7 +56,7 @@ end component;
 
 -- Instruction Decoder
 component Inst_Decoder
-    Port ( Inst : in STD_LOGIC_VECTOR (0 to 11); -- Instruction
+    Port ( Inst : in STD_LOGIC_VECTOR (0 to 12); -- Instruction
            Clk : in STD_LOGIC;
            Reg_Chk : in STD_LOGIC_VECTOR (3 downto 0); -- Check register value for JZR
            Reg_Sel_A : out STD_LOGIC_VECTOR (2 downto 0); -- To select register to load into MUX A
@@ -72,7 +72,7 @@ end component;
 -- Program Rom
 component Program_Rom
     Port ( ROM_in : in STD_LOGIC_VECTOR (2 downto 0);
-           ROM_out : out STD_LOGIC_VECTOR (0 to 11)
+           ROM_out : out STD_LOGIC_VECTOR (0 to 12)
          );
 end component;
 
@@ -166,7 +166,7 @@ signal Clk_slow, Clk_slow_bar : STD_LOGIC; -- Internal clock
 signal LD, Sub, Jmp : STD_LOGIC;
 signal Sel_A, Sel_B, Reg_En, Address, Jmp_Address, Prg_Address, Mem_Sel : STD_LOGIC_VECTOR (2 downto 0);
 signal A, B, S, D, M : STD_LOGIC_VECTOR (3 downto 0);
-signal I : STD_LOGIC_VECTOR (0 to 11);
+signal I : STD_LOGIC_VECTOR (0 to 12);
 signal R : DATA_BUS;
 begin
 
