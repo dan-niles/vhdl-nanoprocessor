@@ -14,42 +14,49 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13152 
+INFO: Helper process launched with PID 11656 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 382.254 ; gain = 97.934
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 381.941 ; gain = 97.617
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Nanoprocessor' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:47]
-INFO: [Synth 8-3491] module 'Slow_Clk' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Slow_Clk.vhd:34' bound to instance 'Slow_Clock' of component 'Slow_Clk' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:174]
-INFO: [Synth 8-638] synthesizing module 'Slow_Clk' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Slow_Clk.vhd:42]
-WARNING: [Synth 8-614] signal 'clk_status' is read in the process but is not in the sensitivity list [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Slow_Clk.vhd:49]
-INFO: [Synth 8-256] done synthesizing module 'Slow_Clk' (1#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Slow_Clk.vhd:42]
-INFO: [Synth 8-3491] module 'Inst_Decoder' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Decoder.vhd:34' bound to instance 'Instruction_Decoder' of component 'Inst_Decoder' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:183]
-INFO: [Synth 8-638] synthesizing module 'Inst_Decoder' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Decoder.vhd:48]
-INFO: [Synth 8-3491] module 'Inst_Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Reg.vhd:34' bound to instance 'Inst_Reg_12' of component 'Inst_Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Decoder.vhd:59]
+INFO: [Synth 8-3491] module 'Slow_Clk' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Slow_Clk.vhd:34' bound to instance 'Slow_Clock' of component 'Slow_Clk' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:176]
+INFO: [Synth 8-638] synthesizing module 'Slow_Clk' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Slow_Clk.vhd:43]
+WARNING: [Synth 8-614] signal 'clk_status' is read in the process but is not in the sensitivity list [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Slow_Clk.vhd:50]
+WARNING: [Synth 8-614] signal 'En' is read in the process but is not in the sensitivity list [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Slow_Clk.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'Slow_Clk' (1#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Slow_Clk.vhd:43]
+INFO: [Synth 8-3491] module 'Inst_Decoder' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Decoder.vhd:34' bound to instance 'Instruction_Decoder' of component 'Inst_Decoder' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'Inst_Decoder' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Decoder.vhd:49]
+INFO: [Synth 8-3491] module 'Inst_Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Reg.vhd:34' bound to instance 'Inst_Reg_13' of component 'Inst_Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Decoder.vhd:61]
 INFO: [Synth 8-638] synthesizing module 'Inst_Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Reg.vhd:41]
 INFO: [Synth 8-256] done synthesizing module 'Inst_Reg' (2#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Reg.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'Inst_Decoder' (3#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Decoder.vhd:48]
-INFO: [Synth 8-3491] module 'Program_Rom' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Program_Rom.vhd:34' bound to instance 'Prog_Rom' of component 'Program_Rom' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:199]
+INFO: [Synth 8-256] done synthesizing module 'Inst_Decoder' (3#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Decoder.vhd:49]
+INFO: [Synth 8-3491] module 'Program_Rom' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Program_Rom.vhd:34' bound to instance 'Prog_Rom' of component 'Program_Rom' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:203]
 INFO: [Synth 8-638] synthesizing module 'Program_Rom' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Program_Rom.vhd:39]
 INFO: [Synth 8-256] done synthesizing module 'Program_Rom' (4#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Program_Rom.vhd:39]
-INFO: [Synth 8-3491] module 'PC' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/PC.vhd:34' bound to instance 'Prog_Counter' of component 'PC' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:206]
+INFO: [Synth 8-3491] module 'PC' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/PC.vhd:34' bound to instance 'Prog_Counter' of component 'PC' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:210]
 INFO: [Synth 8-638] synthesizing module 'PC' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/PC.vhd:41]
 INFO: [Synth 8-256] done synthesizing module 'PC' (5#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/PC.vhd:41]
-INFO: [Synth 8-3491] module 'Reg_Bank' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:34' bound to instance 'Register_Bank' of component 'Reg_Bank' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:215]
+INFO: [Synth 8-3491] module 'Reg_Bank' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:34' bound to instance 'Register_Bank' of component 'Reg_Bank' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:219]
 INFO: [Synth 8-638] synthesizing module 'Reg_Bank' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:49]
-INFO: [Synth 8-226] default block is never used [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:79]
-INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_0' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:92]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab4/Lab4.srcs/sources_1/new/Decoder_3_to_8.vhd:34' bound to instance 'Decoder' of component 'Decoder_3_to_8' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'Decoder_3_to_8' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab4/Lab4.srcs/sources_1/new/Decoder_3_to_8.vhd:42]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Decoder_2_to_4.vhd:34' bound to instance 'Decoder_2_to_4_0' of component 'Decoder_2_to_4' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab4/Lab4.srcs/sources_1/new/Decoder_3_to_8.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'Decoder_2_to_4' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Decoder_2_to_4.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_2_to_4' (6#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Decoder_2_to_4.vhd:40]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Decoder_2_to_4.vhd:34' bound to instance 'Decoder_2_to_4_1' of component 'Decoder_2_to_4' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab4/Lab4.srcs/sources_1/new/Decoder_3_to_8.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_3_to_8' (7#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab4/Lab4.srcs/sources_1/new/Decoder_3_to_8.vhd:42]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_0' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:77]
 INFO: [Synth 8-638] synthesizing module 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'Reg' (6#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:43]
-INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_1' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:101]
-INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_2' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:110]
-INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_3' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:119]
-INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_4' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:128]
-INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_5' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:137]
-INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_6' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:146]
-INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_7' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:155]
-INFO: [Synth 8-256] done synthesizing module 'Reg_Bank' (7#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:49]
-INFO: [Synth 8-3491] module 'Add_Sub_Unit' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_Sub_Unit.vhd:34' bound to instance 'Add_Sub_Unit_4_bit' of component 'Add_Sub_Unit' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'Reg' (8#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:43]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_1' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:86]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_2' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:95]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_3' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:104]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_4' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:113]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_5' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:122]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_6' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:131]
+INFO: [Synth 8-3491] module 'Reg' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab6/Lab6.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_7' of component 'Reg' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'Reg_Bank' (9#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Reg_Bank.vhd:49]
+INFO: [Synth 8-3491] module 'Add_Sub_Unit' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_Sub_Unit.vhd:34' bound to instance 'Add_Sub_Unit_4_bit' of component 'Add_Sub_Unit' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:236]
 INFO: [Synth 8-638] synthesizing module 'Add_Sub_Unit' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_Sub_Unit.vhd:46]
 INFO: [Synth 8-3491] module 'RCA' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/RCA.vhd:34' bound to instance 'RCA_4' of component 'RCA' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_Sub_Unit.vhd:64]
 INFO: [Synth 8-638] synthesizing module 'RCA' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/RCA.vhd:42]
@@ -57,43 +64,43 @@ INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs
 INFO: [Synth 8-638] synthesizing module 'FA' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/FA.vhd:42]
 INFO: [Synth 8-3491] module 'HA' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/HA.vhd:34' bound to instance 'HA_0' of component 'HA' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/FA.vhd:52]
 INFO: [Synth 8-638] synthesizing module 'HA' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/HA.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'HA' (8#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/HA.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'HA' (10#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/HA.vhd:41]
 INFO: [Synth 8-3491] module 'HA' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/HA.vhd:34' bound to instance 'HA_1' of component 'HA' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/FA.vhd:60]
-INFO: [Synth 8-256] done synthesizing module 'FA' (9#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/FA.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'FA' (11#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/FA.vhd:42]
 INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/FA.vhd:34' bound to instance 'FA_1' of component 'FA' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/RCA.vhd:62]
 INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/FA.vhd:34' bound to instance 'FA_2' of component 'FA' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/RCA.vhd:70]
 INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/FA.vhd:34' bound to instance 'FA_3' of component 'FA' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/RCA.vhd:78]
-INFO: [Synth 8-256] done synthesizing module 'RCA' (10#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/RCA.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'Add_Sub_Unit' (11#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_Sub_Unit.vhd:46]
-INFO: [Synth 8-3491] module 'Add_3' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_3.vhd:34' bound to instance 'Adder_3_bit' of component 'Add_3' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:245]
+INFO: [Synth 8-256] done synthesizing module 'RCA' (12#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/RCA.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Add_Sub_Unit' (13#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_Sub_Unit.vhd:46]
+INFO: [Synth 8-3491] module 'Add_3' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_3.vhd:34' bound to instance 'Adder_3_bit' of component 'Add_3' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:249]
 INFO: [Synth 8-638] synthesizing module 'Add_3' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_3.vhd:40]
 INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/FA.vhd:34' bound to instance 'FA_0' of component 'FA' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_3.vhd:52]
 INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/FA.vhd:34' bound to instance 'FA_1' of component 'FA' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_3.vhd:60]
 INFO: [Synth 8-3491] module 'FA' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/FA.vhd:34' bound to instance 'FA_2' of component 'FA' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_3.vhd:68]
-INFO: [Synth 8-256] done synthesizing module 'Add_3' (12#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_3.vhd:40]
-INFO: [Synth 8-3491] module 'Mux_2_3' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_3.vhd:34' bound to instance 'Mux_2_3_0' of component 'Mux_2_3' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:253]
+INFO: [Synth 8-256] done synthesizing module 'Add_3' (14#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_3.vhd:40]
+INFO: [Synth 8-3491] module 'Mux_2_3' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_3.vhd:34' bound to instance 'Mux_2_3_0' of component 'Mux_2_3' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:257]
 INFO: [Synth 8-638] synthesizing module 'Mux_2_3' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_3.vhd:41]
 INFO: [Synth 8-226] default block is never used [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_3.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'Mux_2_3' (13#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_3.vhd:41]
-INFO: [Synth 8-3491] module 'Mux_2_4' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_4.vhd:34' bound to instance 'Mux_2_4_0' of component 'Mux_2_4' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:262]
+INFO: [Synth 8-256] done synthesizing module 'Mux_2_3' (15#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_3.vhd:41]
+INFO: [Synth 8-3491] module 'Mux_2_4' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_4.vhd:34' bound to instance 'Mux_2_4_0' of component 'Mux_2_4' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:266]
 INFO: [Synth 8-638] synthesizing module 'Mux_2_4' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_4.vhd:41]
 INFO: [Synth 8-226] default block is never used [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_4.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'Mux_2_4' (14#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_4.vhd:41]
-INFO: [Synth 8-3491] module 'Mux_8_4' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_8_4.vhd:34' bound to instance 'Mux_8_4_A' of component 'Mux_8_4' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:271]
+INFO: [Synth 8-256] done synthesizing module 'Mux_2_4' (16#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_4.vhd:41]
+INFO: [Synth 8-3491] module 'Mux_8_4' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_8_4.vhd:34' bound to instance 'Mux_8_4_A' of component 'Mux_8_4' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:275]
 INFO: [Synth 8-638] synthesizing module 'Mux_8_4' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_8_4.vhd:47]
 INFO: [Synth 8-226] default block is never used [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_8_4.vhd:52]
-INFO: [Synth 8-256] done synthesizing module 'Mux_8_4' (15#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_8_4.vhd:47]
-INFO: [Synth 8-3491] module 'Mux_8_4' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_8_4.vhd:34' bound to instance 'Mux_8_4_B' of component 'Mux_8_4' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:286]
-INFO: [Synth 8-3491] module 'LUT_16_7' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/LUT_16_7.vhd:34' bound to instance 'Seg_7_LUT' of component 'LUT_16_7' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'Mux_8_4' (17#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_8_4.vhd:47]
+INFO: [Synth 8-3491] module 'Mux_8_4' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_8_4.vhd:34' bound to instance 'Mux_8_4_B' of component 'Mux_8_4' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:290]
+INFO: [Synth 8-3491] module 'LUT_16_7' declared at 'E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/LUT_16_7.vhd:34' bound to instance 'Seg_7_LUT' of component 'LUT_16_7' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:305]
 INFO: [Synth 8-638] synthesizing module 'LUT_16_7' [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/LUT_16_7.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'LUT_16_7' (16#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/LUT_16_7.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'Nanoprocessor' (17#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'LUT_16_7' (18#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/LUT_16_7.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Nanoprocessor' (19#1) [E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Nanoprocessor.vhd:47]
 WARNING: [Synth 8-3917] design Nanoprocessor has port Anode[3] driven by constant 1
 WARNING: [Synth 8-3917] design Nanoprocessor has port Anode[2] driven by constant 1
 WARNING: [Synth 8-3917] design Nanoprocessor has port Anode[1] driven by constant 1
 WARNING: [Synth 8-3917] design Nanoprocessor has port Anode[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 437.625 ; gain = 153.305
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 437.406 ; gain = 153.082
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -106,10 +113,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 437.625 ; gain = 153.305
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 437.406 ; gain = 153.082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 437.625 ; gain = 153.305
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 437.406 ; gain = 153.082
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -125,29 +132,29 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 763.082 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 762.562 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 763.082 ; gain = 478.762
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 762.562 ; gain = 478.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 763.082 ; gain = 478.762
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 762.562 ; gain = 478.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 763.082 ; gain = 478.762
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 762.562 ; gain = 478.238
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clk_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "PROGRAM_ROM" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "sevenSegment_ROM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 763.082 ; gain = 478.762
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 762.562 ; gain = 478.238
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -166,14 +173,13 @@ Detailed RTL Component Info :
 	   4 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
-	               12 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
 	                4 Bit    Registers := 8     
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
-	   9 Input     12 Bit        Muxes := 1     
-	   8 Input      8 Bit        Muxes := 1     
+	   9 Input     13 Bit        Muxes := 1     
 	  17 Input      7 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
@@ -198,11 +204,11 @@ Detailed RTL Component Info :
 Module Inst_Reg 
 Detailed RTL Component Info : 
 +---Registers : 
-	               12 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
 Module Program_Rom 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   9 Input     12 Bit        Muxes := 1     
+	   9 Input     13 Bit        Muxes := 1     
 Module PC 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -211,10 +217,6 @@ Module Reg
 Detailed RTL Component Info : 
 +---Registers : 
 	                4 Bit    Registers := 1     
-Module Reg_Bank 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   8 Input      8 Bit        Muxes := 1     
 Module HA 
 Detailed RTL Component Info : 
 +---XORs : 
@@ -258,18 +260,17 @@ WARNING: [Synth 8-3917] design Nanoprocessor has port Anode[3] driven by constan
 WARNING: [Synth 8-3917] design Nanoprocessor has port Anode[2] driven by constant 1
 WARNING: [Synth 8-3917] design Nanoprocessor has port Anode[1] driven by constant 1
 WARNING: [Synth 8-3917] design Nanoprocessor has port Anode[0] driven by constant 0
-INFO: [Synth 8-3886] merging instance 'Instruction_Decoder/Inst_Reg_12/Q_reg[11]' (FD_1) to 'Instruction_Decoder/Inst_Reg_12/Q_reg[0]'
-INFO: [Synth 8-3886] merging instance 'Instruction_Decoder/Inst_Reg_12/Q_reg[8]' (FD_1) to 'Instruction_Decoder/Inst_Reg_12/Q_reg[5]'
-INFO: [Synth 8-3886] merging instance 'Register_Bank/Reg_0/Q_reg[3]' (FDCE) to 'Register_Bank/Reg_0/Q_reg[2]'
-INFO: [Synth 8-3886] merging instance 'Register_Bank/Reg_0/Q_reg[2]' (FDCE) to 'Register_Bank/Reg_0/Q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Instruction_Decoder/Inst_Reg_13/Q_reg[9]' (FD_1) to 'Instruction_Decoder/Inst_Reg_13/Q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Register_Bank/Reg_0/Q_reg[3]' (FDCE) to 'Register_Bank/Reg_0/Q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Register_Bank/Reg_0/Q_reg[2]' (FDCE) to 'Register_Bank/Reg_0/Q_reg[0]'
 INFO: [Synth 8-3886] merging instance 'Register_Bank/Reg_0/Q_reg[1]' (FDCE) to 'Register_Bank/Reg_0/Q_reg[0]'
-INFO: [Synth 8-3886] merging instance 'Instruction_Decoder/Inst_Reg_12/Q_reg[7]' (FD_1) to 'Instruction_Decoder/Inst_Reg_12/Q_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Instruction_Decoder/Inst_Reg_12/Q_reg[5] )
+INFO: [Synth 8-3886] merging instance 'Instruction_Decoder/Inst_Reg_13/Q_reg[8]' (FD_1) to 'Instruction_Decoder/Inst_Reg_13/Q_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Instruction_Decoder/Inst_Reg_13/Q_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Register_Bank/Reg_0/Q_reg[0] )
-WARNING: [Synth 8-3332] Sequential element (Instruction_Decoder/Inst_Reg_12/Q_reg[5]) is unused and will be removed from module Nanoprocessor.
+WARNING: [Synth 8-3332] Sequential element (Instruction_Decoder/Inst_Reg_13/Q_reg[6]) is unused and will be removed from module Nanoprocessor.
 WARNING: [Synth 8-3332] Sequential element (Register_Bank/Reg_0/Q_reg[0]) is unused and will be removed from module Nanoprocessor.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 763.082 ; gain = 478.762
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 762.562 ; gain = 478.238
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -281,13 +282,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 763.082 ; gain = 478.762
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 762.562 ; gain = 478.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 784.367 ; gain = 500.047
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 786.551 ; gain = 502.227
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -299,7 +300,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 785.188 ; gain = 500.867
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 786.551 ; gain = 502.227
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -323,7 +324,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 785.188 ; gain = 500.867
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 786.551 ; gain = 502.227
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -336,7 +337,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 785.188 ; gain = 500.867
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 786.551 ; gain = 502.227
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -348,25 +349,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 785.188 ; gain = 500.867
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 786.551 ; gain = 502.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 785.188 ; gain = 500.867
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 786.551 ; gain = 502.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 785.188 ; gain = 500.867
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 786.551 ; gain = 502.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 785.188 ; gain = 500.867
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 786.551 ; gain = 502.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -384,48 +385,47 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |     8|
-|3     |LUT1   |     1|
-|4     |LUT2   |     5|
-|5     |LUT3   |    20|
-|6     |LUT4   |    15|
-|7     |LUT5   |    16|
-|8     |LUT6   |    15|
-|9     |MUXF7  |     4|
-|10    |FDCE   |    34|
-|11    |FDPE   |     2|
-|12    |FDRE   |    40|
-|13    |LDC    |     2|
-|14    |IBUF   |     2|
-|15    |OBUF   |    19|
+|3     |LUT2   |     3|
+|4     |LUT3   |    22|
+|5     |LUT4   |    18|
+|6     |LUT5   |    21|
+|7     |LUT6   |    15|
+|8     |MUXF7  |     4|
+|9     |FDCE   |    34|
+|10    |FDPE   |     2|
+|11    |FDRE   |    42|
+|12    |LDC    |     2|
+|13    |IBUF   |     2|
+|14    |OBUF   |    19|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+----------------------+-------------+------+
 |      |Instance              |Module       |Cells |
 +------+----------------------+-------------+------+
-|1     |top                   |             |   184|
-|2     |  Instruction_Decoder |Inst_Decoder |    20|
-|3     |    Inst_Reg_12       |Inst_Reg     |    20|
-|4     |  Prog_Counter        |PC           |    13|
-|5     |  Register_Bank       |Reg_Bank     |    62|
+|1     |top                   |             |   193|
+|2     |  Instruction_Decoder |Inst_Decoder |    32|
+|3     |    Inst_Reg_13       |Inst_Reg     |    32|
+|4     |  Prog_Counter        |PC           |    15|
+|5     |  Register_Bank       |Reg_Bank     |    59|
 |6     |    Reg_1             |Reg          |     4|
 |7     |    Reg_2             |Reg_0        |     4|
-|8     |    Reg_3             |Reg_1        |    27|
+|8     |    Reg_3             |Reg_1        |    24|
 |9     |    Reg_4             |Reg_2        |     4|
 |10    |    Reg_5             |Reg_3        |     4|
 |11    |    Reg_6             |Reg_4        |     4|
 |12    |    Reg_7             |Reg_5        |    15|
-|13    |  Slow_Clock          |Slow_Clk     |    67|
+|13    |  Slow_Clock          |Slow_Clk     |    65|
 +------+----------------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 785.188 ; gain = 500.867
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 786.551 ; gain = 502.227
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 785.188 ; gain = 175.410
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 785.188 ; gain = 500.867
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 786.551 ; gain = 177.070
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 786.551 ; gain = 502.227
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -433,11 +433,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-95 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+100 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 785.188 ; gain = 512.980
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 789.344 ; gain = 517.484
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'E:/Projects/Lab_9_10/Lab_9_10.runs/synth_1/Nanoprocessor.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Nanoprocessor_utilization_synth.rpt -pb Nanoprocessor_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 785.188 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Aug  6 22:55:14 2022...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 789.344 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Aug  7 02:04:45 2022...

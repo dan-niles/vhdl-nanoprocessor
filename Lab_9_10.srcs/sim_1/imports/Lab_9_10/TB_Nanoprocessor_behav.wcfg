@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="6000000001fs"></ZoomEndTime>
-      <Cursor1Time time="975227000fs"></Cursor1Time>
+      <ZoomEndTime time="7400000001fs"></ZoomEndTime>
+      <Cursor1Time time="1722489000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="119"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="141"></NameColumnWidth>
+      <ValueColumnWidth column_width="96"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="30" />
    <wvobject fp_name="/TB_Nanoprocessor/Clk" type="logic">
       <obj_property name="ElementShortName">Clk</obj_property>
       <obj_property name="ObjectShortName">Clk</obj_property>
@@ -46,10 +46,100 @@
    <wvobject fp_name="/TB_Nanoprocessor/L" type="array">
       <obj_property name="ElementShortName">L[3:0]</obj_property>
       <obj_property name="ObjectShortName">L[3:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/TB_Nanoprocessor/Seg_7" type="array">
       <obj_property name="ElementShortName">Seg_7[6:0]</obj_property>
       <obj_property name="ObjectShortName">Seg_7[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Prog_Counter/PC_in" type="array">
+      <obj_property name="ElementShortName">PC_in[2:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_in[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Prog_Counter/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Prog_Counter/Res" type="logic">
+      <obj_property name="ElementShortName">Res</obj_property>
+      <obj_property name="ObjectShortName">Res</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Prog_Counter/PC_out" type="array">
+      <obj_property name="ElementShortName">PC_out[2:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_out[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Inst" type="array">
+      <obj_property name="ElementShortName">Inst[0:12]</obj_property>
+      <obj_property name="ObjectShortName">Inst[0:12]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Reg_Chk" type="array">
+      <obj_property name="ElementShortName">Reg_Chk[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Reg_Chk[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Reg_Sel_A" type="array">
+      <obj_property name="ElementShortName">Reg_Sel_A[2:0]</obj_property>
+      <obj_property name="ObjectShortName">Reg_Sel_A[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Reg_Sel_B" type="array">
+      <obj_property name="ElementShortName">Reg_Sel_B[2:0]</obj_property>
+      <obj_property name="ObjectShortName">Reg_Sel_B[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Imd_Val" type="array">
+      <obj_property name="ElementShortName">Imd_Val[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Imd_Val[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Reg_En" type="array">
+      <obj_property name="ElementShortName">Reg_En[2:0]</obj_property>
+      <obj_property name="ObjectShortName">Reg_En[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Load_Sel" type="logic">
+      <obj_property name="ElementShortName">Load_Sel</obj_property>
+      <obj_property name="ObjectShortName">Load_Sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Add_Sub_Sel" type="logic">
+      <obj_property name="ElementShortName">Add_Sub_Sel</obj_property>
+      <obj_property name="ObjectShortName">Add_Sub_Sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Clk_En" type="logic">
+      <obj_property name="ElementShortName">Clk_En</obj_property>
+      <obj_property name="ObjectShortName">Clk_En</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Jmp" type="logic">
+      <obj_property name="ElementShortName">Jmp</obj_property>
+      <obj_property name="ObjectShortName">Jmp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Jmp_Address" type="array">
+      <obj_property name="ElementShortName">Jmp_Address[2:0]</obj_property>
+      <obj_property name="ObjectShortName">Jmp_Address[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/I" type="array">
+      <obj_property name="ElementShortName">I[0:12]</obj_property>
+      <obj_property name="ObjectShortName">I[0:12]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Jmp_Z" type="logic">
+      <obj_property name="ElementShortName">Jmp_Z</obj_property>
+      <obj_property name="ObjectShortName">Jmp_Z</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Jmp_NZ" type="logic">
+      <obj_property name="ElementShortName">Jmp_NZ</obj_property>
+      <obj_property name="ObjectShortName">Jmp_NZ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Jmp_C" type="logic">
+      <obj_property name="ElementShortName">Jmp_C</obj_property>
+      <obj_property name="ObjectShortName">Jmp_C</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Sub" type="logic">
+      <obj_property name="ElementShortName">Sub</obj_property>
+      <obj_property name="ObjectShortName">Sub</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Instruction_Decoder/Neg" type="logic">
+      <obj_property name="ElementShortName">Neg</obj_property>
+      <obj_property name="ObjectShortName">Neg</obj_property>
    </wvobject>
 </wave_config>

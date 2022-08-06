@@ -54,7 +54,7 @@ component Inst_Reg
 end component;
 
 signal I : STD_LOGIC_VECTOR (0 to 12);
-signal Jmp_Z, Jmp_NZ, Jmp_C : STD_LOGIC;
+signal Jmp_Z, Jmp_NZ, Jmp_C, Sub, Neg : STD_LOGIC;
 
 begin
 -- 13 bit instruction register
@@ -73,8 +73,11 @@ Inst_Reg_13 : Inst_Reg
 -- 100 - SUB
 -- 101 - JMP
 -- 110 - JNZR
--- 111 - END?
-Add_Sub_Sel <= NOT(I(1)) AND I(2); -- Output is 1 when opcode is 001
+-- 111 - END
+Sub <= I(0) AND NOT(I(1)) AND NOT(I(2)); -- Output is 1 when opcode is 100
+Neg <= NOT(I(0)) AND NOT(I(1)) AND I(2); -- Output is 1 when opcode is 001
+Add_Sub_Sel <= Neg OR Sub; 
+
 Load_Sel <= I(1) AND NOT(I(2)); -- Output is 1 when opcode is 010
 Clk_En <= NOT(I(0)) OR NOT(I(1)) OR NOT(I(2));  -- Output is 0 when opcode is 111
 
@@ -83,12 +86,14 @@ Jmp_Z <= (I(1) AND I(2)) AND NOT(Reg_Chk(0) OR Reg_Chk(1) OR Reg_Chk(2) OR Reg_C
 Jmp_NZ <= (I(0) AND I(1) AND NOT(I(2))) AND (Reg_Chk(0) OR Reg_Chk(1) OR Reg_Chk(2) OR Reg_Chk(3)); -- Output is 1 when opcode is 110 and checked register value is not 0000
 Jmp <= Jmp_C OR Jmp_Z OR Jmp_NZ;  
 
--- Mapping bits 4-6 for register A
-Reg_Sel_A <= I(3) & I(4) & I(5);
-Reg_En <= I(3) & I(4) & I(5); 
+-- Mapping bits for register A and B
+--Reg_Sel_A <= ((Neg & Neg & Neg) AND (I(3) & I(4) & I(5))) OR ((Sub & Sub & Sub) AND (I(6) & I(7) & I(8)));
+--Reg_Sel_B <= ((Neg & Neg & Neg) AND (I(6) & I(7) & I(8))) OR ((Sub & Sub & Sub) AND (I(3) & I(4) & I(5)));
 
--- Mapping bits 7-9 for register B
+Reg_Sel_A <= I(3) & I(4) & I(5);
 Reg_Sel_B <= I(6) & I(7) & I(8);
+
+Reg_En <= I(3) & I(4) & I(5); 
 
 -- Mapping last 4 bits
 Imd_Val <= I(9) & I(10) & I(11) & I(12); -- Value to load if MOVI instruction is used

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Aug  6 22:56:20 2022
+| Date         : Sun Aug  7 02:05:51 2022
 | Host         : DAN-PC running 64-bit major release  (build 9200)
 | Command      : report_drc -file Nanoprocessor_drc_routed.rpt -pb Nanoprocessor_drc_routed.pb -rpx Nanoprocessor_drc_routed.rpx
 | Design       : Nanoprocessor
@@ -50,31 +50,31 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net Slow_Clock/CLK is a gated clock net sourced by a combinational pin Slow_Clock/Q[0]_i_2/O, cell Slow_Clock/Q[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Instruction_Decoder/Inst_Reg_13/Clk_out_reg_C is a gated clock net sourced by a combinational pin Instruction_Decoder/Inst_Reg_13/Clk_out_reg_LDC_i_2/O, cell Instruction_Decoder/Inst_Reg_13/Clk_out_reg_LDC_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net Slow_Clock/Clk_out_reg_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Slow_Clock/Clk_out_reg_LDC_i_1/O, cell Slow_Clock/Clk_out_reg_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Slow_Clock/CLK is a gated clock net sourced by a combinational pin Slow_Clock/Q[0]_i_2/O, cell Slow_Clock/Q[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net Slow_Clock/Clk_out_reg_LDC_i_2_n_0 is a gated clock net sourced by a combinational pin Slow_Clock/Clk_out_reg_LDC_i_2/O, cell Slow_Clock/Clk_out_reg_LDC_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Slow_Clock/Clk_out_reg_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Slow_Clock/Clk_out_reg_LDC_i_1/O, cell Slow_Clock/Clk_out_reg_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT Slow_Clock/Q[0]_i_2 is driving clock pin of 11 cells. This could lead to large hold time violations. First few involved cells are:
-    Instruction_Decoder/Inst_Reg_12/Q_reg[0] {FDRE}
-    Instruction_Decoder/Inst_Reg_12/Q_reg[10] {FDRE}
-    Instruction_Decoder/Inst_Reg_12/Q_reg[1] {FDRE}
-    Instruction_Decoder/Inst_Reg_12/Q_reg[2] {FDRE}
-    Instruction_Decoder/Inst_Reg_12/Q_reg[3] {FDRE}
-    Instruction_Decoder/Inst_Reg_12/Q_reg[4] {FDRE}
-    Instruction_Decoder/Inst_Reg_12/Q_reg[6] {FDRE}
-    Instruction_Decoder/Inst_Reg_12/Q_reg[9] {FDRE}
-    Prog_Counter/PC_out_reg[0] {FDCE}
+A LUT Slow_Clock/Q[0]_i_2 is driving clock pin of 13 cells. This could lead to large hold time violations. First few involved cells are:
+    Instruction_Decoder/Inst_Reg_13/Q_reg[0] {FDRE}
+    Instruction_Decoder/Inst_Reg_13/Q_reg[10] {FDRE}
+    Instruction_Decoder/Inst_Reg_13/Q_reg[11] {FDRE}
+    Instruction_Decoder/Inst_Reg_13/Q_reg[12] {FDRE}
+    Instruction_Decoder/Inst_Reg_13/Q_reg[1] {FDRE}
+    Instruction_Decoder/Inst_Reg_13/Q_reg[2] {FDRE}
+    Instruction_Decoder/Inst_Reg_13/Q_reg[3] {FDRE}
+    Instruction_Decoder/Inst_Reg_13/Q_reg[4] {FDRE}
+    Instruction_Decoder/Inst_Reg_13/Q_reg[5] {FDRE}
 
 Related violations: <none>
 

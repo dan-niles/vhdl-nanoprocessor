@@ -32,6 +32,8 @@ set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_3.vhd
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Add_Sub_Unit.vhd
+  E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Decoder_2_to_4.vhd
+  E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/Projects/Lab4/Lab4.srcs/sources_1/new/Decoder_3_to_8.vhd
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/FA.vhd
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/HA.vhd
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Decoder.vhd
