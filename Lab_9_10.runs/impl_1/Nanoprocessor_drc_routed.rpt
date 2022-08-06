@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Jul 28 11:59:45 2022
+| Date         : Sat Aug  6 22:31:10 2022
 | Host         : DAN-PC running 64-bit major release  (build 9200)
 | Command      : report_drc -file Nanoprocessor_drc_routed.rpt -pb Nanoprocessor_drc_routed.pb -rpx Nanoprocessor_drc_routed.rpx
 | Design       : Nanoprocessor
@@ -24,13 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 7
+             Violations found: 5
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
 | CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
-| PDRC-153    | Warning  | Gated clock check                                           | 4          |
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
+| PDRC-153    | Warning  | Gated clock check                                           | 3          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
 +-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -63,11 +63,6 @@ Gated clock check
 Net Slow_Clock/Clk_out_reg_LDC_i_2_n_0 is a gated clock net sourced by a combinational pin Slow_Clock/Clk_out_reg_LDC_i_2/O, cell Slow_Clock/Clk_out_reg_LDC_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
-PDRC-153#4 Warning
-Gated clock check  
-Net Slow_Clock/Q_reg[0] is a gated clock net sourced by a combinational pin Slow_Clock/Q[3]_i_3/O, cell Slow_Clock/Q[3]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
 A LUT Slow_Clock/Q[0]_i_2 is driving clock pin of 11 cells. This could lead to large hold time violations. First few involved cells are:
@@ -80,21 +75,6 @@ A LUT Slow_Clock/Q[0]_i_2 is driving clock pin of 11 cells. This could lead to l
     Instruction_Decoder/Inst_Reg_12/Q_reg[6] {FDRE}
     Instruction_Decoder/Inst_Reg_12/Q_reg[9] {FDRE}
     Prog_Counter/D_FF0/Q_reg {FDCE}
-
-Related violations: <none>
-
-PLHOLDVIO-2#2 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT Slow_Clock/Q[3]_i_3 is driving clock pin of 29 cells. This could lead to large hold time violations. First few involved cells are:
-    Register_Bank/Reg_1/Q_reg[0] {FDCE}
-    Register_Bank/Reg_1/Q_reg[1] {FDCE}
-    Register_Bank/Reg_1/Q_reg[2] {FDCE}
-    Register_Bank/Reg_1/Q_reg[3] {FDCE}
-    Register_Bank/Reg_2/Q_reg[0] {FDCE}
-    Register_Bank/Reg_2/Q_reg[1] {FDCE}
-    Register_Bank/Reg_2/Q_reg[2] {FDCE}
-    Register_Bank/Reg_2/Q_reg[3] {FDCE}
-    Register_Bank/Reg_3/Q_reg[0] {FDCE}
 
 Related violations: <none>
 

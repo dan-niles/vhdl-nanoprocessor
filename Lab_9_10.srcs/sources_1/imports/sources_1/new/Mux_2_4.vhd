@@ -39,44 +39,14 @@ entity Mux_2_4 is
 end Mux_2_4;
 
 architecture Behavioral of Mux_2_4 is
-component Mux_2_to_1
-    Port ( I0 : in STD_LOGIC;
-           I1 : in STD_LOGIC;
-           S : in STD_LOGIC;
-           Q : out STD_LOGIC);
-end component;
 
 begin
-mux1 : Mux_2_to_1
-    PORT MAP(
-        I0 => I0(0),
-        I1 => I1(0),
-        S => S,
-        Q => Q(0)
-    );
-    
-mux2 : Mux_2_to_1
-    PORT MAP(
-        I0 => I0(1),
-        I1 => I1(1),
-        S => S,
-        Q => Q(1)
-    );
-    
-mux3 : Mux_2_to_1
-    PORT MAP(
-        I0 => I0(2),
-        I1 => I1(2),
-        S => S,
-        Q => Q(2)
-    );
-    
-mux4 : Mux_2_to_1
-    PORT MAP(
-        I0 => I0(3),
-        I1 => I1(3),
-        S => S,
-        Q => Q(3)
-    );
-
+    process(I0,I1,S)
+    begin
+        case S is
+            when '0' => Q <= I0;
+            when '1' => Q <= I1; 
+            when others => Q <= "ZZZZ";
+        end case;
+     end process;
 end Behavioral;

@@ -49,5 +49,4 @@ begin
             when others => Q <= "ZZZ";
         end case;
      end process;
-    
 end Behavioral;

@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -41,11 +40,9 @@ read_vhdl -library xil_defaultlib {
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Decoder.vhd
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Inst_Reg.vhd
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/LUT_16_7.vhd
-  E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/MUX_2_to_1.vhd
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_3.vhd
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_2_4.vhd
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Mux_8_4.vhd
-  E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/Mux_8_to_1.vhd
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/PC.vhd
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/new/Program_Rom.vhd
   E:/Projects/Lab_9_10/Lab_9_10.srcs/sources_1/imports/sources_1/imports/new/RCA.vhd

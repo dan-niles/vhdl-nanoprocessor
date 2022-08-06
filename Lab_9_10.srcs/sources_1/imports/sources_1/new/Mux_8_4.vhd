@@ -45,72 +45,20 @@ entity Mux_8_4 is
 end Mux_8_4;
 
 architecture Behavioral of Mux_8_4 is
-component Mux_8_to_1
-    Port ( D : in STD_LOGIC_VECTOR (7 downto 0);
-           S : in STD_LOGIC_VECTOR (2 downto 0);
-           EN : in STD_LOGIC;
-           Y : out STD_LOGIC);
-end component;
 
 begin
-mux0 : Mux_8_to_1
-    PORT MAP(
-        D(0) => R0(0),
-        D(1) => R1(0),
-        D(2) => R2(0),
-        D(3) => R3(0),
-        D(4) => R4(0),
-        D(5) => R5(0),
-        D(6) => R6(0),
-        D(7) => R7(0),
-        S => S,
-        EN => '1',
-        Y => Q(0)
-    );
-    
-mux1 : Mux_8_to_1
-    PORT MAP(
-        D(0) => R0(1),
-        D(1) => R1(1),
-        D(2) => R2(1),
-        D(3) => R3(1),
-        D(4) => R4(1),
-        D(5) => R5(1),
-        D(6) => R6(1),
-        D(7) => R7(1),
-        S => S,
-        EN => '1',
-        Y => Q(1)
-    );
-    
-mux2 : Mux_8_to_1
-    PORT MAP(
-        D(0) => R0(2),
-        D(1) => R1(2),
-        D(2) => R2(2),
-        D(3) => R3(2),
-        D(4) => R4(2),
-        D(5) => R5(2),
-        D(6) => R6(2),
-        D(7) => R7(2),
-        S => S,
-        EN => '1',
-        Y => Q(2)
-    );
-        
-mux3 : Mux_8_to_1
-    PORT MAP(
-        D(0) => R0(3),
-        D(1) => R1(3),
-        D(2) => R2(3),
-        D(3) => R3(3),
-        D(4) => R4(3),
-        D(5) => R5(3),
-        D(6) => R6(3),
-        D(7) => R7(3),
-        S => S,
-        EN => '1',
-        Y => Q(3)
-    );
-
+    process(R0,R1,R2,R3,R4,R5,R6,R7,S)
+    begin
+        case S is
+            when "000" => Q <= R0;
+            when "001" => Q <= R1; 
+            when "010" => Q <= R2; 
+            when "011" => Q <= R3; 
+            when "100" => Q <= R4; 
+            when "101" => Q <= R5; 
+            when "110" => Q <= R6; 
+            when "111" => Q <= R7; 
+            when others => Q <= "ZZZZ";
+        end case;
+     end process;
 end Behavioral;

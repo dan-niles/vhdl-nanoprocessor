@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Jul 28 11:59:47 2022
+| Date             : Sat Aug  6 22:31:12 2022
 | Host             : DAN-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file Nanoprocessor_power_routed.rpt -pb Nanoprocessor_power_summary_routed.pb -rpx Nanoprocessor_power_routed.rpx
 | Design           : Nanoprocessor
@@ -53,12 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      180 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       65 |     20800 |            0.31 |
-|   Register     |    <0.001 |       79 |     41600 |            0.19 |
+| Slice Logic    |    <0.001 |      175 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       60 |     20800 |            0.29 |
+|   Register     |    <0.001 |       80 |     41600 |            0.19 |
 |   CARRY4       |    <0.001 |        8 |      8150 |            0.10 |
+|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |    <0.001 |      155 |       --- |             --- |
+|   F7/F8 Muxes  |     0.000 |        4 |     32600 |            0.01 |
+| Signals        |    <0.001 |      142 |       --- |             --- |
 | I/O            |    <0.001 |       21 |       106 |           19.81 |
 | Static Power   |     0.068 |          |           |                 |
 | Total          |     0.070 |          |           |                 |
