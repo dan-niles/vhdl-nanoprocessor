@@ -32,10 +32,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity D_FF is
-    Port ( D : in STD_LOGIC;
+    Port ( D : in STD_LOGIC := '0';
            Res : in STD_LOGIC;
            Clk : in STD_LOGIC;
-           Q : out STD_LOGIC);
+           Q : out STD_LOGIC := '0');
 end D_FF;
 
 architecture Behavioral of D_FF is

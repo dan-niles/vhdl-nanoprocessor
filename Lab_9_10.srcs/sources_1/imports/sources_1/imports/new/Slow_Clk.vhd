@@ -32,10 +32,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Slow_Clk is
-    Port ( Clk_in : in STD_LOGIC;
+    Port ( Clk_in : in STD_LOGIC := '0';
            Reset : in STD_LOGIC;
-           Clk_out : out STD_LOGIC;
-           Clk_out_bar : out STD_LOGIC
+           Clk_out : out STD_LOGIC := '0';
+           Clk_out_bar : out STD_LOGIC := '1'
            );
 end Slow_Clk;
 
@@ -53,7 +53,7 @@ process (Clk_in,Reset) begin
         Clk_out_bar <= not clk_status;
     elsif (rising_edge(Clk_in)) then
         count <= count + 1;           
-        --if(count  = 50000000) then  -- For Basys3 board
+--        if(count  = 50000000) then  -- For Basys3 board
         if(count = 4) then         -- For simulation in vivado
             clk_status <= not clk_status;
             Clk_out <= clk_status;
