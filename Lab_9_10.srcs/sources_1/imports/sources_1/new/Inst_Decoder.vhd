@@ -41,6 +41,7 @@ entity Inst_Decoder is
            Reg_En : out STD_LOGIC_VECTOR (2 downto 0); -- Enable register for write
            Load_Sel : out STD_LOGIC; -- Choose between Imd value or Add/Sub Unit result
            Add_Sub_Sel : out STD_LOGIC; -- Add Sub selector
+           Clk_En : out STD_LOGIC; -- Enable/Disable clock
            Jmp : out STD_LOGIC; -- Jump flag
            Jmp_Address : out STD_LOGIC_VECTOR (2 downto 0)); -- Address to jump
 end Inst_Decoder;
@@ -68,9 +69,14 @@ Inst_Reg_13 : Inst_Reg
 -- 000 - ADD
 -- 001 - NEG
 -- 011 - JZR
+-- 100 - SUB
+-- 101 - JMP
+-- 110 - JNZR
+-- 111 - END?
 Add_Sub_Sel <= NOT(I(1)) AND I(2); -- Output is 1 when opcode is 001
 Load_Sel <= I(1) AND NOT(I(2)); -- Output is 1 when opcode is 010
-Jmp <= (I(1) AND I(2)) AND NOT(Reg_Chk(0) OR Reg_Chk(1) OR Reg_Chk(2) OR Reg_Chk(3)); -- Output is 1 when opcode is 011 and checked register value is 0000 
+Jmp <= ((I(1) AND I(2)) AND NOT(Reg_Chk(0) OR Reg_Chk(1) OR Reg_Chk(2) OR Reg_Chk(3))) OR (I(0) AND NOT(I(1)) AND I(2)); -- Output is 1 when opcode is 011 and checked register value is 0000 
+Clk_En <= NOT(I(0)) OR NOT(I(1)) OR NOT(I(2));  -- Output is 0 when opcode is 111
 
 -- Mapping bits 4-6 for register A
 Reg_Sel_A <= I(3) & I(4) & I(5);

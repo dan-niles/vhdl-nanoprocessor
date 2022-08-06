@@ -33,6 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Slow_Clk is
     Port ( Clk_in : in STD_LOGIC := '0';
+           En : in STD_LOGIC := '1';
            Reset : in STD_LOGIC;
            Clk_out : out STD_LOGIC := '0';
            Clk_out_bar : out STD_LOGIC := '1'
@@ -51,6 +52,9 @@ process (Clk_in,Reset) begin
         clk_status <= '0';
         Clk_out <= clk_status;
         Clk_out_bar <= not clk_status;
+    elsif (En = '0') then
+        Clk_out <= '0';
+        Clk_out_bar <= '1';
     elsif (rising_edge(Clk_in)) then
         count <= count + 1;           
 --        if(count  = 50000000) then  -- For Basys3 board

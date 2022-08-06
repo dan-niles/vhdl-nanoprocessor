@@ -48,6 +48,7 @@ architecture Behavioral of Nanoprocessor is
 -- Slow Clock
 component Slow_Clk
     Port ( Clk_in : in STD_LOGIC;
+           En : in STD_LOGIC;
            Reset : in STD_LOGIC;
            Clk_out : out STD_LOGIC;
            Clk_out_bar : out STD_LOGIC
@@ -65,6 +66,7 @@ component Inst_Decoder
            Reg_En : out STD_LOGIC_VECTOR (2 downto 0); -- Enable register for write
            Load_Sel : out STD_LOGIC; -- Choose between Imd value or Add/Sub Unit result
            Add_Sub_Sel : out STD_LOGIC; -- Add Sub selector
+           Clk_En : out STD_LOGIC; -- Enable/Disable clock
            Jmp : out STD_LOGIC; -- Jump flag
            Jmp_Address : out STD_LOGIC_VECTOR (2 downto 0)); -- Address to jump
 end component;
@@ -162,7 +164,7 @@ end component;
 
 type DATA_BUS is array (0 to 7) of std_logic_vector(3 downto 0);
 
-signal Clk_slow, Clk_slow_bar : STD_LOGIC; -- Internal clock
+signal Clk_slow, Clk_slow_bar, Clk_En : STD_LOGIC; -- Internal clock
 signal LD, Sub, Jmp : STD_LOGIC;
 signal Sel_A, Sel_B, Reg_En, Address, Jmp_Address, Prg_Address, Mem_Sel : STD_LOGIC_VECTOR (2 downto 0);
 signal A, B, S, D, M : STD_LOGIC_VECTOR (3 downto 0);
@@ -174,6 +176,7 @@ begin
 Slow_Clock : Slow_Clk
     PORT MAP (
         Clk_in => Clk,
+        En => Clk_En,
         Reset => Reset,
         Clk_out => Clk_slow,
         Clk_out_bar => Clk_slow_bar
@@ -191,6 +194,7 @@ Instruction_Decoder : Inst_Decoder
         Reg_En => Reg_En, 
         Load_Sel => LD, 
         Add_Sub_Sel => Sub, 
+        Clk_En => Clk_En,
         Jmp => Jmp, 
         Jmp_Address => Jmp_Address
     );

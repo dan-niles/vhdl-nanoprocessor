@@ -93,7 +93,10 @@ UUT: Inst_Decoder PORT MAP(
         Inst <= "0010010000000"; -- NEG Reg 1
         wait for 100ns;
         
-        Inst <= "0111110000011"; -- JZR to Inst 3 if Reg 7 is zero
+        Inst <= "1011110000100"; -- JMP Reg to Inst 4
+        wait for 100ns;
+        
+        Inst <= "0111110000011"; -- (JZR) JMP to Inst 3 if Reg 7 is zero
         Reg_Chk <= "0000";
         wait for 100ns;
     

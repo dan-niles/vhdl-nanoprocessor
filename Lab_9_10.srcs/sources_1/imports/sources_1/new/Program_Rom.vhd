@@ -48,7 +48,7 @@ architecture Behavioral of Program_Rom is
             "0000010100000", -- 4 -- ADD R1, R2
             "0110010000111", -- 5 -- JZR R1, 7 
             "0110000000011", -- 6 -- JZR R0, 3
-            "0110010000101"  -- 7 -- JZR R1, 5
+            "1110000000000"  -- 7 -- END
         );
 
 ---- Program that displays numbers by decrementing 10 by 1
@@ -61,7 +61,7 @@ architecture Behavioral of Program_Rom is
 --        "0111110000111", -- 4 -- JZR R7, 7
 --        "0110000000011", -- 5 -- JZR R0, 3
 --        "0111110000111", -- 6 -- JZR R1, 7 
---        "0111110000100"  -- 7 -- JZR R7, 4
+--        "1110000000000"  -- 7 -- END
 --    );
 
 begin

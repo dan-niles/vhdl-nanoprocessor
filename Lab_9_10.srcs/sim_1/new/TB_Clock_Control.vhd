@@ -38,11 +38,13 @@ end TB_Clock_Control;
 architecture Behavioral of TB_Clock_Control is
 component Clock_Control
     Port ( Clk_in : in STD_LOGIC;
+           En : in STD_LOGIC;
            Reset : in STD_LOGIC;
            Clk_out_1 : out STD_LOGIC;
            Clk_out_2 : out STD_LOGIC);
 end component;
 
+signal en : STD_LOGIC := '1';
 signal clk, reset : STD_LOGIC := '0';
 signal Clk_out_1, Clk_out_2 : STD_LOGIC;
 
@@ -50,6 +52,7 @@ begin
 UUT: Clock_Control 
     PORT MAP ( 
        Clk_in => clk,
+       En => en,
        Reset => reset,
        Clk_out_1 => Clk_out_1,
        Clk_out_2 => Clk_out_2 
