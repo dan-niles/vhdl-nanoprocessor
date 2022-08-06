@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_Nanoprocessor_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_Nanoprocessor" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="6000000001fs"></ZoomEndTime>
+      <Cursor1Time time="6000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="140"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/TB_Nanoprocessor/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/Reset" type="logic">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/C_Flag" type="logic">
+      <obj_property name="ElementShortName">C_Flag</obj_property>
+      <obj_property name="ObjectShortName">C_Flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/Z_Flag" type="logic">
+      <obj_property name="ElementShortName">Z_Flag</obj_property>
+      <obj_property name="ObjectShortName">Z_Flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/N_Flag" type="logic">
+      <obj_property name="ElementShortName">N_Flag</obj_property>
+      <obj_property name="ObjectShortName">N_Flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/P_Flag" type="logic">
+      <obj_property name="ElementShortName">P_Flag</obj_property>
+      <obj_property name="ObjectShortName">P_Flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/L" type="array">
+      <obj_property name="ElementShortName">L[3:0]</obj_property>
+      <obj_property name="ObjectShortName">L[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/Seg_7" type="array">
+      <obj_property name="ElementShortName">Seg_7[6:0]</obj_property>
+      <obj_property name="ObjectShortName">Seg_7[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Clk_slow" type="logic">
+      <obj_property name="ElementShortName">Clk_slow</obj_property>
+      <obj_property name="ObjectShortName">Clk_slow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_Nanoprocessor/UUT/Clk_slow_bar" type="logic">
+      <obj_property name="ElementShortName">Clk_slow_bar</obj_property>
+      <obj_property name="ObjectShortName">Clk_slow_bar</obj_property>
+   </wvobject>
+</wave_config>
