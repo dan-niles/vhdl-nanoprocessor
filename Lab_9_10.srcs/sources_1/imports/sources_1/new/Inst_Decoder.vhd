@@ -54,6 +54,7 @@ component Inst_Reg
 end component;
 
 signal I : STD_LOGIC_VECTOR (0 to 12);
+signal Jmp_Z, Jmp_NZ, Jmp_C : STD_LOGIC;
 
 begin
 -- 13 bit instruction register
@@ -75,8 +76,12 @@ Inst_Reg_13 : Inst_Reg
 -- 111 - END?
 Add_Sub_Sel <= NOT(I(1)) AND I(2); -- Output is 1 when opcode is 001
 Load_Sel <= I(1) AND NOT(I(2)); -- Output is 1 when opcode is 010
-Jmp <= ((I(1) AND I(2)) AND NOT(Reg_Chk(0) OR Reg_Chk(1) OR Reg_Chk(2) OR Reg_Chk(3))) OR (I(0) AND NOT(I(1)) AND I(2)); -- Output is 1 when opcode is 011 and checked register value is 0000 
 Clk_En <= NOT(I(0)) OR NOT(I(1)) OR NOT(I(2));  -- Output is 0 when opcode is 111
+
+Jmp_C <= I(0) AND NOT(I(1)) AND I(2); -- Output is 1 when opcode is 101
+Jmp_Z <= (I(1) AND I(2)) AND NOT(Reg_Chk(0) OR Reg_Chk(1) OR Reg_Chk(2) OR Reg_Chk(3)); -- Output is 1 when opcode is 011 and checked register value is 0000
+Jmp_NZ <= (I(0) AND I(1) AND NOT(I(2))) AND (Reg_Chk(0) OR Reg_Chk(1) OR Reg_Chk(2) OR Reg_Chk(3)); -- Output is 1 when opcode is 110 and checked register value is not 0000
+Jmp <= Jmp_C OR Jmp_Z OR Jmp_NZ;  
 
 -- Mapping bits 4-6 for register A
 Reg_Sel_A <= I(3) & I(4) & I(5);
